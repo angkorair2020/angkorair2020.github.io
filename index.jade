@@ -1,0 +1,25 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+        main.wrapper
+            section.home
+
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+
+
+        script.
+            $(".headerNavbar__toggle button").click(function () {
+                $('.headerNavbar__cont').slideToggle(300);
+            });
+
+
+
+

@@ -1,0 +1,11 @@
+.textDashed{
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: $medium;
+  border-bottom: 1px dashed #000;
+  display: inline-block;
+  @include breakpoint(sm){
+    font-size: 1vw;
+  }
+}

@@ -1,0 +1,87 @@
+.btn{
+  border-radius: 0;
+  transition: all .15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint(sm){
+    font-size: 1vw;
+    padding: .5vw 1vw;
+  }
+  &:focus{
+    outline: none;
+    box-shadow: none;
+  }
+  &:hover{
+    opacity: .8;
+  }
+  &.btn-lg{
+    @include breakpoint(sm){
+      font-size: 1.3vw;
+    }
+  }
+  &.btn-purple{
+    color: #fff;
+    background-color: $purple;
+    border-color: $purple;
+  }
+  &.btn-outline{
+    border-color: #ced4da;
+  }
+  &.btn-green{
+    color: #fff;
+    background-color: $green;
+    border-color: $green;
+  }
+  &.btn-black{
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+  }
+  &.btn-blue{
+    color: #fff;
+    background-color: $blue;
+    border-color: $blue;
+  }
+}
+.showMore{
+  text-transform: uppercase;
+  font-weight: $regular;
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  font-size: 14px;
+  color: #000;
+  @include breakpoint(sm){
+    font-size: 1vw;
+  }
+  span{
+    margin-right: 5px;
+    @include breakpoint(sm){
+      margin-right: .5vw;
+    }
+  }
+  &.showMore_white{
+    color: #fff;
+    border-color: #fff;
+  }
+}
+.btnGroup{
+  display: inline-flex;
+  .btn{
+    + .btn{
+      margin-left: 15px;
+      @include breakpoint(sm){
+        margin-left: 1vw;
+      }
+    }
+  }
+  a{
+    + a{
+      margin-left: 15px;
+      @include breakpoint(sm){
+        margin-left: 1vw;
+      }
+    }
+  }
+}

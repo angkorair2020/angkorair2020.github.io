@@ -1,0 +1,188 @@
+.inputSearch{
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include breakpoint(sm){
+    width: 20vw;
+  }
+  input{
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #000;
+    flex: 1 1 auto;
+    @include breakpoint(sm){
+      padding: .5vw 0;
+      font-size: 1vw;
+    }
+  }
+  button{
+    padding: 10px;
+    @include breakpoint(sm){
+      padding: .5vw;
+    }
+  }
+}
+.btnCard{
+  button{
+    &:hover{
+      span{
+        color: $purple;
+      }
+    }
+    span{
+      font-size: 15px;
+      color: #000;
+      text-transform: uppercase;
+      font-weight: $medium;
+      margin-right: 5px;
+      @include breakpoint(sm){
+        font-size: 1vw;
+        margin-right: .5vw;
+      }
+    }
+    i{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      background: $green;
+      font-style: normal;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: $medium;
+      @include breakpoint(sm){
+        width: 1.5vw;
+        height: 1.5vw;
+        font-size: .8vw;
+      }
+    }
+  }
+}
+.btnLogin{
+  button{
+    &:hover{
+      span{
+        color: $purple;
+      }
+    }
+    span{
+      font-size: 15px;
+      color: #000;
+      text-transform: uppercase;
+      font-weight: $medium;
+      margin-right: 5px;
+      @include breakpoint(sm){
+        font-size: 1vw;
+        margin-right: .5vw;
+      }
+    }
+    i{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      background: $purple;
+      font-style: normal;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: $medium;
+      @include breakpoint(sm){
+        width: 1.5vw;
+        height: 1.5vw;
+        font-size: .8vw;
+      }
+    }
+  }
+}
+.form-control{
+  border-radius: 0;
+  &:focus{
+    box-shadow: none;
+    border-color: #ced4da;
+  }
+}
+
+.breadcr{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  padding:10px 0;
+  font-size: 13px;
+  @include breakpoint(sm){
+    font-size: 1vw;
+    padding: .8vw 0;
+  }
+  >li{
+    font-size: 13px;
+    white-space: nowrap;
+    @include breakpoint(sm){
+      font-size: 1vw;
+    }
+    &:before{
+      content:'\003e';
+      padding: 0 8px;
+      color:#595959;
+      @include breakpoint(sm){
+        padding: 0 .5vw;
+      }
+    }
+    &:first-child{
+      &:before{
+        display: none;
+      }
+    }
+    &:last-child{
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  >.active{
+    a{
+      color:#000;
+    }
+  }
+  span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    a{
+      padding: 0 5px;
+      color: #7e7e7e;
+      @include breakpoint(sm){
+        padding: 0 .5vw;
+      }
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .breadcrumb_last{
+      padding: 0 5px;
+      font-weight: 400;
+      color: #000;
+      @include breakpoint(sm){
+        padding: 0 .5vw;
+      }
+    }
+  }
+  > span{
+    > span{
+      > a{
+        padding-left: 0;
+      }
+    }
+  }
+}
+.close{
+  font-size: 18px;
+  @include breakpoint(sm){
+    font-size: 1.2vw;
+  }
+}
