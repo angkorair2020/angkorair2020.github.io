@@ -111,126 +111,24 @@ h5{
   width: 33.333% !important;
 }
 
-
-
-
-
-
-
-.blockCountdown{
-  display: flex;
-  align-items: center;
-  margin-left: -15px;
-  margin-right: -15px;
-  @include breakpoint(sm){
-    margin-left: -1vw;
-    margin-right: -1vw;
-  }
-  &__item{
-    text-align: center;
-    padding: 0 15px;
-    @include breakpoint(sm){
-      padding: 0 1vw;
-    }
-    &:first-child{
-      display: none;
-    }
-    p{
-      font-size: 15px;
-      text-transform: uppercase;
-      color: #000;
-      font-weight: $semibold;
-      @include breakpoint(sm){
-        font-size: 1vw;
-      }
-    }
-
-  }
-  .numb{
-    font-size: 30px;
-    font-weight: $bold;
-    color: $purple;
-    position: relative;
-    @include breakpoint(sm){
-      font-size: 2vw;
-    }
-    &:after{
-      content: ':';
-      position: absolute;
-      right: -18px;
-      top: 6px;
-      font-size: 22px;
-      @include breakpoint(sm){
-        right: -1.2vw;
-        top: .5vw;
-        font-size: 1.5vw;
-      }
-    }
-    &.seconds{
-      &:after{
-        display: none;
-      }
-    }
+.svg1{
+  @include breakpoint(only-ipad){
+    width: 1vw;
   }
 }
-.quantity{
-  display: inline-flex;
-  border: 1px solid #8888;
-  background-color: #fff;
-  input{
-    border: none;
-    background: transparent;
-    width: 50px;
-    text-align: center;
-    font-size: 14px;
-    color: #000;
-    font-weight: $semibold;
-    @include breakpoint(sm){
-      width: 5vw;
-      font-size: 1vw;
-    }
-  }
-  &__minus,
-  &__plus{
-    padding: 10px;
-    font-size: 14px;
-    @include breakpoint(sm){
-      padding: .5vw;
-      font-size: 1vw;
-    }
-    &.disabled{
-      cursor: not-allowed;
-      background-color: #eee;
-      opacity: .5;
-      button{
-        pointer-events: none;
-      }
-    }
-  }
-  &__minus{
-    border-right: 1px solid #888;
-  }
-  &__plus{
-    border-left: 1px solid #888;
+.svg1point5{
+  @include breakpoint(only-ipad){
+    width: 1.5vw;
   }
 }
-.pIcon{
-  position: relative;
-  margin-bottom: 10px;
-  font-size: 15px;
-  @include breakpoint(sm){
-    margin-bottom: .8vw;
-    font-size: 1vw;
-  }
-  i{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  span{
-    padding-left: 25px;
-    @include breakpoint(sm){
-      padding-left: 2vw;
-    }
+.svg2{
+  @include breakpoint(only-ipad){
+    width: 2vw;
   }
 }
+
+
+
+
+
+
