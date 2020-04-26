@@ -127,7 +127,21 @@ h5{
   }
 }
 
-
+.iconLine{
+  display: flex;
+  align-items: baseline;
+  color: $purple;
+  font-size: 14px;
+  @include breakpoint(sm){
+    font-size: 1vw;
+  }
+  span{
+    margin-left: 5px;
+    @include breakpoint(sm){
+      margin-left: .5vw;
+    }
+  }
+}
 
 
 

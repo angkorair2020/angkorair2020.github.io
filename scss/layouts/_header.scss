@@ -275,20 +275,23 @@
   }
   .dropdown-menu{
     @include breakpoint(xs){
-      min-width: 100px;
+      min-width: 200px;
     }
     @include breakpoint(sm){
-      min-width: 5vw;
-      padding: 0;
+      min-width: 10vw;
     }
   }
   .dropdown-item{
+    display: flex;
+    align-items: center;
     @include breakpoint(sm){
       text-align: center;
-      padding: .5vw 0;
     }
-    img{
-      margin: auto;
+    span{
+      margin-left: 5px;
+      @include breakpoint(sm){
+        margin-left: .5vw;
+      }
     }
   }
 }

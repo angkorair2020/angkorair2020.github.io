@@ -38,11 +38,54 @@
     box-shadow: none;
     border-color: #ced4da;
   }
+  &.form-control-lg{
+    @include breakpoint(xs){
+      height: 48px;
+    }
+    @include breakpoint(sm){
+      height: 3.3vw;
+    }
+  }
 }
 
 .close{
   font-size: 18px;
   @include breakpoint(sm){
     font-size: 1.2vw;
+  }
+}
+.form-group{
+  @include breakpoint(xs){
+    margin-bottom: 15px;
+  }
+  @include breakpoint(sm){
+    margin-bottom: 1vw;
+  }
+  >label{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    @include breakpoint(sm){
+      font-size: 1vw;
+      margin-bottom: .7vw;
+    }
+  }
+}
+.inputSvg{
+  position: relative;
+  > svg{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    @include breakpoint(sm){
+      left: 1vw;
+    }
+  }
+  .form-control{
+    padding-left: 45px;
+    @include breakpoint(sm){
+      padding-left: 3vw;
+    }
   }
 }

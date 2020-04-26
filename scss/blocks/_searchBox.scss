@@ -1,0 +1,385 @@
+.searchBox{
+  &__tab{
+    @include breakpoint(xs){
+      margin: 0 -15px;
+    }
+    @include breakpoint(sm){
+      display: flex;
+    }
+    li{
+      @include breakpoint(xs){
+        border-bottom: 1px solid #fff;
+        &:last-child{
+          border-bottom: none;
+        }
+      }
+      @include breakpoint(sm){
+        width: 25%;
+        border-right: 1px solid #fff;
+        &:last-child{
+          border-right: none;
+        }
+      }
+      &.active{
+        button{
+          background: $purple;
+          color: #fff;
+          svg{
+            path{
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+    button{
+      background: #F2D8F8;
+      color: $purple;
+      font-weight: 500;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      @include breakpoint(xs){
+        font-size: 14px;
+        height: 48px;
+        position: relative;
+        padding: 0 15px;
+      }
+      @include breakpoint(sm){
+        font-size: 1vw;
+        height: 3.3vw;
+        justify-content: center;
+      }
+      span{
+        margin-left: 10px;
+        @include breakpoint(sm){
+          margin-left: .5vw;
+        }
+      }
+      .svgArrow{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        @include breakpoint(sm){
+          display: none;
+        }
+      }
+    }
+  }
+  &__item{
+    background: #fff;
+    @include breakpoint(xs){
+      position: fixed;
+      top: 56px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      padding: 15px 15px 30px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      transition: all .3s ease-in-out;
+      transform: translateX(-100%);
+      visibility: hidden;
+    }
+    @include breakpoint(sm){
+      padding: 1vw 2vw;
+      display: none;
+      animation: opacityShow .2s ease-in-out;
+    }
+    &.open{
+      @include breakpoint(xs){
+        transform: none;
+        visibility: visible;
+      }
+      @include breakpoint(sm){
+        display: block;
+      }
+    }
+  }
+  &__radio{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    @include breakpoint(sm){
+      margin-bottom: 1vw;
+    }
+    .radio{
+      +.radio{
+        @include breakpoint(xs){
+          margin-left: 15px;
+        }
+        @include breakpoint(sm){
+          margin-left: 3vw;
+        }
+      }
+    }
+  }
+  &__form{
+    @include breakpoint(xs){
+      position: relative;
+    }
+    @include breakpoint(sm){
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      margin: 0 -.7vw;
+    }
+    .form-group{
+      position: relative;
+      @include breakpoint(sm){
+        padding: 0 .7vw;
+      }
+      &.w25{
+        @include breakpoint(sm){
+          width: calc((100% - 2.2vw)/4);
+        }
+      }
+      &.w20{
+        @include breakpoint(sm){
+          width: 20%;
+        }
+      }
+      &.w16{
+        @include breakpoint(sm){
+          width: 16%;
+        }
+      }
+      .dropdown-menu{
+        min-width: 100%;
+      }
+    }
+    .btnRound{
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+      @include breakpoint(xs){
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 0;
+        top: 85px;
+        svg{
+          width: 16px;
+        }
+      }
+      @include breakpoint(sm){
+        width: 2.2vw;
+        height: 2.2vw;
+        margin-bottom: 1.4vw;
+      }
+    }
+  }
+  &__btn{
+    @include breakpoint(sm){
+      margin-bottom: 1vw;
+      width: 24%;
+      padding: 0 .7vw;
+    }
+  }
+  &__close{
+    text-align: right;
+    margin-bottom: 15px;
+    @include breakpoint(sm){
+      display: none;
+    }
+  }
+  .iconLine{
+    @include breakpoint(xs){
+      margin-bottom: 15px;
+    }
+    @include breakpoint(sm){
+      margin-bottom: 1.8vw;
+      width: 16%;
+      padding: 0 .7vw;
+    }
+  }
+}
+
+.suggestDefault{
+  width: 50vw;
+  background-color: #fff;
+  box-shadow:0 0 8px rgba(0, 0, 0, 0.15);
+  border-bottom: 4px solid $purple;
+  border-radius: 4px;
+  position: absolute;
+  top: 100%;
+  left: .7vw;
+  z-index: 10;
+  display: none;
+  &.open{
+    display: block;
+  }
+  &__header{
+    background-color: #f2f2f2;
+    padding: .8vw 1vw;
+    h5{
+      color: #878787;
+      font-weight: 400;
+      font-size: .8vw;
+    }
+  }
+  &__body{
+    display: flex;
+  }
+  &__tab{
+    width: 13vw;
+    li{
+      width: 100%;
+      &:last-child{
+        button{
+          border: none;
+        }
+      }
+      &.active{
+        button{
+          background: $purple;
+          color: #fff;
+        }
+      }
+      button{
+        background: #F2D8F8;
+        text-transform: uppercase;
+        font-size: 1vw;
+        font-weight: 500;
+        color: $purple;
+        display: block;
+        padding: 1vw;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+  &__content{
+    width: calc(100% - 13vw);
+    //max-height: 30vw;
+    //overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      width:4px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background-color: #f2f2f2;
+      border-radius: 16px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background:#bcbcbc;
+      border-radius: 16px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #bcbcbc;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      width: 33.333%;
+      button{
+        font-size: 1vw;
+        padding: 1vw;
+        color: #000;
+        width: 100%;
+        text-align: left;
+        transition: all .1s;
+        &:hover{
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+.suggestPlace{
+  background-color: #fff;
+  box-shadow: $shadow;
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+  border-bottom: 4px solid $purple;
+  border-radius: 4px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+  @include breakpoint(xs){
+    width: 100%;
+    left: 0;
+    max-height: 400px;
+  }
+  @include breakpoint(sm){
+    width: 25vw;
+    left: .7vw;
+    max-height: 30vw;
+    &::-webkit-scrollbar {
+      width:4px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background-color: #f2f2f2;
+      border-radius: 16px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background:#bcbcbc;
+      border-radius: 16px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #bcbcbc;
+    }
+  }
+  &.open{
+    display: block;
+  }
+  &__list{
+    li{
+      &.liTitle{
+        background-color: #F2D8F8;
+        padding: 10px 15px;
+        color: $purple;
+        font-weight: 500;
+        font-size: 12px;
+        text-transform: uppercase;
+        @include breakpoint(sm){
+          padding: .8vw 1vw;
+          font-size: .8vw;
+        }
+      }
+      button{
+        font-size: 14px;
+        color: #000;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        @include breakpoint(sm){
+          font-size: 1vw;
+          padding: 1vw;
+          transition: .2s;
+          &:hover{
+            color: $orange;
+          }
+        }
+        span{
+          &.span2{
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}

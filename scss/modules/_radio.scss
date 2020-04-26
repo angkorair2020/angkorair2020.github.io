@@ -7,7 +7,7 @@
     cursor: pointer;
     margin-bottom: 0;
     padding-left:30px;
-    color: #595959;
+    color: #000;
     font-size: 14px;
     @include breakpoint(sm){
       font-size: 1vw;
@@ -35,7 +35,7 @@
   }
   input[type="radio"]:checked + label:before {
     border: 3px solid #fff;
-    box-shadow: 0 0 0 1px $green;
-    background-color: $green;
+    box-shadow: 0 0 0 1px $orange;
+    background-color: $orange;
   }
 }

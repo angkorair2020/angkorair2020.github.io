@@ -1,7 +1,13 @@
+@keyframes opacityShow {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
 @import "global-classes";
 @import "checkbox";
 @import "radio";
 @import "buttons";
 @import "form";
 @import "text";
+@import "dropdown";
 
