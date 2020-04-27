@@ -127,6 +127,16 @@
       align-items: flex-end;
       margin: 0 -.7vw;
     }
+    &.selected{
+      @include breakpoint(xs){
+        padding-right: 39px;
+      }
+      .btnRound{
+        @include breakpoint(xs){
+          right: 39px;
+        }
+      }
+    }
     .form-group{
       position: relative;
       @include breakpoint(sm){
@@ -137,14 +147,19 @@
           width: calc((100% - 2.2vw)/4);
         }
       }
-      &.w20{
+      &.w28{
         @include breakpoint(sm){
-          width: 20%;
+          width: calc(100% - ((100% - 2.2vw)/4)*3);
         }
       }
-      &.w16{
+      &.w19{
         @include breakpoint(sm){
-          width: 16%;
+          width: 19%;
+        }
+      }
+      &.w38{
+        @include breakpoint(sm){
+          width: 38%;
         }
       }
       .dropdown-menu{
@@ -188,14 +203,105 @@
       display: none;
     }
   }
+  &__promotion{
+    display: none;
+  }
+  &__add{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    @include breakpoint(sm){
+      font-size: 1vw;
+      margin-bottom: 1vw;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    span{
+      margin-left: 5px;
+      @include breakpoint(sm){
+        margin-left: .5vw;
+      }
+    }
+    svg,span{
+      vertical-align: middle;
+    }
+  }
+  &__remove{
+    @include breakpoint(xs){
+      position: absolute;
+      top: 30px;
+      right: 0;
+      bottom: 0;
+    }
+    @include breakpoint(sm){
+      margin-bottom: 2vw;
+      padding: 0 .7vw;
+    }
+    button{
+      @include breakpoint(xs){
+        border-radius: 4px;
+        background: $purple;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px;
+        svg{
+          path{
+            fill: #fff;
+            fill-opacity: 1;
+          }
+        }
+      }
+      @include breakpoint(sm){
+        font-size: 1vw;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      svg,span{
+        vertical-align: middle;
+      }
+      span{
+        @include breakpoint(xs){
+          display: none;
+        }
+        @include breakpoint(sm){
+          margin-left: .5vw;
+        }
+      }
+    }
+  }
+  &__booking{
+    .alert{
+      margin: 15px 0;
+      @include breakpoint(sm){
+        margin: 1vw 0;
+      }
+    }
+  }
+  &__status{
+    .searchBox__form{
+      @include breakpoint(sm){
+        justify-content: flex-end;
+      }
+    }
+  }
   .iconLine{
     @include breakpoint(xs){
       margin-bottom: 15px;
     }
     @include breakpoint(sm){
       margin-bottom: 1.8vw;
-      width: 16%;
+      width: 19%;
       padding: 0 .7vw;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -382,4 +488,14 @@
       }
     }
   }
+}
+#return{
+  &.disabled{
+    cursor: not-allowed;
+    opacity: .3;
+    .inputSvg{
+      pointer-events: none;
+    }
+  }
+
 }

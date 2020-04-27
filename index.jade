@@ -54,7 +54,7 @@ html(lang="vi")
                                     button(type='button')
                                         svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
                                             path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
-                                .searchBox__flight
+                                .searchBox__trip
                                     .searchBox__radio
                                         .radio
                                             input#fl1(type='radio', name='fl' checked='')
@@ -66,7 +66,279 @@ html(lang="vi")
                                         .radio
                                             input#fl3(type='radio', name='fl')
                                             label(for='fl3') Multi - Cities
+                                    .noMulti
+                                        .searchBox__form
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Origin')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                                include jades/suggestDefault
+                                                include jades/suggestPlace
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
 
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Destination')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+
+                                                include jades/suggestDefault
+                                                include jades/suggestPlace
+                                            .form-group.w25
+                                                label Depart
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Depart')
+                                                    svg.svg1point5(width='18', height='20', viewBox='0 0 18 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.89 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.89 17.1 2 16 2ZM16 18H2V7H16V18ZM9 16V14H5V11H9V9L13 12.5L9 16Z', fill='black', fill-opacity='0.25')
+
+                                            #return.form-group.w25
+                                                label Return
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Return')
+                                                    svg.svg1point5(width='18', height='20', viewBox='0 0 18 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.89 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.89 17.1 2 16 2ZM16 18H2V7H16V18ZM9 9V11H13V14H9V16L5 12.5L9 9Z', fill='black', fill-opacity='0.25')
+
+                                            .form-group.w19
+                                                label Adults (>12 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Adults
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19
+                                                label Children (2 - 12 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Children
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19
+                                                label Infants (<2 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Children
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19.searchBox__promotion
+                                                label Promotion code
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Code')
+                                                    svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='black', fill-opacity='0.25')
+                                            button.iconLine.btnPromotion(type='button')
+                                                svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='#662F8E')
+                                                span Promotion code
+                                            .searchBox__btn
+                                                a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND FLIGHTS
+                                    .multi.hidden
+                                        .searchBox__form
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Origin')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                                include jades/suggestDefault
+                                                include jades/suggestPlace
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Destination')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+
+                                                include jades/suggestDefault
+                                                include jades/suggestPlace
+                                            .form-group.w25
+                                                label Depart
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Depart')
+                                                    svg.svg1point5(width='18', height='20', viewBox='0 0 18 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.89 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.89 17.1 2 16 2ZM16 18H2V7H16V18ZM9 16V14H5V11H9V9L13 12.5L9 16Z', fill='black', fill-opacity='0.25')
+
+
+                                        .searchBox__form.selected
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='Hanoi')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='Tp Ho Chi Minh')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                            .form-group.w25
+                                                label Depart
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='T5, 30/04/2020')
+                                                    svg.svg1point5(width='18', height='20', viewBox='0 0 18 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.89 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.89 17.1 2 16 2ZM16 18H2V7H16V18ZM9 16V14H5V11H9V9L13 12.5L9 16Z', fill='black', fill-opacity='0.25')
+
+
+                                            .searchBox__remove
+                                                button(type='button')
+                                                    svg.svg1point5(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.25')
+                                                    span Remove Flight
+                                        .searchBox__form.selected
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='Hanoi')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='Danang')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                            .form-group.w25
+                                                label Depart
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='T6, 01/05/2020')
+                                                    svg.svg1point5(width='18', height='20', viewBox='0 0 18 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.89 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.89 17.1 2 16 2ZM16 18H2V7H16V18ZM9 16V14H5V11H9V9L13 12.5L9 16Z', fill='black', fill-opacity='0.25')
+
+
+                                            .searchBox__remove
+                                                button(type='button')
+                                                    svg.svg1point5(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.25')
+                                                    span Remove Flight
+                                        button.searchBox__add(type='button')
+                                            svg.svg1point5(width='18', height='18', viewBox='0 0 18 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M14 10H10V14H8V10H4V8H8V4H10V8H14V10ZM16 0H2C0.89 0 0 0.89 0 2V16C0 16.5304 0.210714 17.0391 0.585786 17.4142C0.960859 17.7893 1.46957 18 2 18H16C16.5304 18 17.0391 17.7893 17.4142 17.4142C17.7893 17.0391 18 16.5304 18 16V2C18 0.89 17.1 0 16 0Z', fill='#F79320')
+                                            span ADD ANOTHER FLIGHT
+                                        .searchBox__form
+                                            .form-group.w19
+                                                label Adults (>12 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Adults
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19
+                                                label Children (2 - 12 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Children
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19
+                                                label Infants (<2 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Children
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19.searchBox__promotion
+                                                label Promotion code
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Code')
+                                                    svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='black', fill-opacity='0.25')
+                                            button.iconLine.btnPromotion(type='button')
+                                                svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='#662F8E')
+                                                span Promotion code
+                                            .searchBox__btn
+                                                a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND FLIGHTS
+                            #tab-2.searchBox__item
+                                .searchBox__close
+                                    button(type='button')
+                                        svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                                .searchBox__booking
+                                    p.text14.colorBlack65.mb15 Please enter the reservation code and last name standing on the booking to view and/or manage the booking details such as select/change seat, special meal, specify ROP number, contact information or purchase excess baggage.
+                                    .searchBox__form
+                                        .form-group.w38
+                                            label Booking Ref or E-ticket number
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' placeholder='Booking Ref or E-ticket number')
+                                                svg.svg1point5(width='20', height='16', viewBox='0 0 20 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M11 4.5H9V2.5H11V4.5ZM11 9H9V7H11V9ZM11 13.5H9V11.5H11V13.5ZM20 6V2C20 0.89 19.1 0 18 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V6C1.11 6 2 6.9 2 8C2 8.53043 1.78929 9.03914 1.41421 9.41421C1.03914 9.78929 0.530433 10 0 10V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H18C18.5304 16 19.0391 15.7893 19.4142 15.4142C19.7893 15.0391 20 14.5304 20 14V10C19.4696 10 18.9609 9.78929 18.5858 9.41421C18.2107 9.03914 18 8.53043 18 8C18 7.46957 18.2107 6.96086 18.5858 6.58579C18.9609 6.21071 19.4696 6 20 6Z', fill='black', fill-opacity='0.25')
+
+                                        .form-group.w38
+                                            label Email
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' placeholder='Email')
+                                                svg.svg1point5(width='20', height='16', viewBox='0 0 20 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L10 9L2 4V2L10 7L18 2V4ZM18 0H2C0.89 0 0 0.89 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H18C18.5304 16 19.0391 15.7893 19.4142 15.4142C19.7893 15.0391 20 14.5304 20 14V2C20 0.89 19.1 0 18 0Z', fill='black', fill-opacity='0.25')
+
+                                        .searchBox__btn
+                                            a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND MY BOOKING
+                                    .alert.alert_blue
+                                        .alert__icon
+                                        svg.svg1point5(width='22', height='22', viewBox='0 0 22 22', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M11 0C4.92545 0 0 4.92545 0 11C0 17.0746 4.92545 22 11 22C17.0746 22 22 17.0746 22 11C22 4.92545 17.0746 0 11 0ZM11 20.1339C5.9567 20.1339 1.86607 16.0433 1.86607 11C1.86607 5.9567 5.9567 1.86607 11 1.86607C16.0433 1.86607 20.1339 5.9567 20.1339 11C20.1339 16.0433 16.0433 20.1339 11 20.1339Z', fill='#1890FF')
+                                            path(d='M9.82129 6.67857C9.82129 6.99115 9.94546 7.29092 10.1665 7.51195C10.3875 7.73297 10.6873 7.85714 10.9999 7.85714C11.3124 7.85714 11.6122 7.73297 11.8332 7.51195C12.0543 7.29092 12.1784 6.99115 12.1784 6.67857C12.1784 6.36599 12.0543 6.06622 11.8332 5.8452C11.6122 5.62417 11.3124 5.5 10.9999 5.5C10.6873 5.5 10.3875 5.62417 10.1665 5.8452C9.94546 6.06622 9.82129 6.36599 9.82129 6.67857ZM11.5891 9.42857H10.4106C10.3025 9.42857 10.2141 9.51696 10.2141 9.625V16.3036C10.2141 16.4116 10.3025 16.5 10.4106 16.5H11.5891C11.6972 16.5 11.7856 16.4116 11.7856 16.3036V9.625C11.7856 9.51696 11.6972 9.42857 11.5891 9.42857Z', fill='#1890FF')
+                                        .alert__text
+                                            p Note: It is only accepted for bookings on our website!
+                            #tab-3.searchBox__item
+                                .searchBox__close
+                                    button(type='button')
+                                        svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                                .searchBox__schedules
+                                    p.text16.colorBlack85.mb15.medium Enter Flight Information
                                     .searchBox__form
                                         .form-group.w25
                                             label Origin
@@ -96,76 +368,72 @@ html(lang="vi")
                                                 svg.svg1point5(width='18', height='20', viewBox='0 0 18 20', fill='none', xmlns='http://www.w3.org/2000/svg')
                                                     path(d='M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.89 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.89 17.1 2 16 2ZM16 18H2V7H16V18ZM9 16V14H5V11H9V9L13 12.5L9 16Z', fill='black', fill-opacity='0.25')
 
-                                        .form-group.w25
-                                            label Return
-                                            .inputSvg
-                                                input.form-control.form-control-lg(type='text' placeholder='Return')
-                                                svg.svg1point5(width='18', height='20', viewBox='0 0 18 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                    path(d='M16 2H15V0H13V2H5V0H3V2H2C0.89 2 0 2.89 0 4V18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.89 17.1 2 16 2ZM16 18H2V7H16V18ZM9 9V11H13V14H9V16L5 12.5L9 9Z', fill='black', fill-opacity='0.25')
-
-                                        .form-group.w20
-                                            label Adults (>12 yrs)
-                                            .dropdown
-                                                button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
-                                                    svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                        path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
-                                                    span Adults
-                                                .dropdown-menu
-                                                    a.dropdown-item 1
-                                                    a.dropdown-item 2
-                                                    a.dropdown-item 3
-                                                    a.dropdown-item 4
-                                                    a.dropdown-item 5
-                                        .form-group.w20
-                                            label Children (2 - 12 yrs)
-                                            .dropdown
-                                                button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
-                                                    svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                        path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
-                                                    span Children
-                                                .dropdown-menu
-                                                    a.dropdown-item 1
-                                                    a.dropdown-item 2
-                                                    a.dropdown-item 3
-                                                    a.dropdown-item 4
-                                                    a.dropdown-item 5
-                                        .form-group.w20
-                                            label Infants (<2 yrs)
-                                            .dropdown
-                                                button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
-                                                    svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                        path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
-                                                    span Children
-                                                .dropdown-menu
-                                                    a.dropdown-item 1
-                                                    a.dropdown-item 2
-                                                    a.dropdown-item 3
-                                                    a.dropdown-item 4
-                                                    a.dropdown-item 5
-                                        .iconLine
-                                            svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='#662F8E')
-                                            span Promotion code
                                         .searchBox__btn
                                             a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND FLIGHTS
-                            #tab-2.searchBox__item
-                                .searchBox__close
-                                    button(type='button')
-                                        svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
-                                h1 tab-2
-                            #tab-3.searchBox__item
-                                .searchBox__close
-                                    button(type='button')
-                                        svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
-                                h1 tab-3
                             #tab-4.searchBox__item
                                 .searchBox__close
                                     button(type='button')
                                         svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
                                             path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
-                                h1 tab-4
+                                .searchBox__status
+                                    p.text16.colorBlack85.mb15.medium Enter Flight Information
+                                    .searchBox__radio
+                                        .radio
+                                            input#r1(type='radio', name='fl' checked='')
+                                            label(for='r1') Route
+                                        .radio
+                                            input#r2(type='radio', name='fl')
+                                            label(for='r2') Flight Number
+                                    .route
+                                        .searchBox__form
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Origin')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                                include jades/suggestDefault
+                                                include jades/suggestPlace
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Destination')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+
+                                                include jades/suggestDefault
+                                                include jades/suggestPlace
+                                            .form-group.w25
+                                                label Depart
+                                                button.btn.btn-orange.btn-lg.w-100(type='button')
+                                                    span Today Apr 20
+                                            .form-group.w25
+                                                button.btn.btn-outline.btn-lg.w-100(type='button')
+                                                    span Tomorrow Apr 21
+                                            .searchBox__btn
+                                                a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND FLIGHTS
+                                     .flightNumber.hidden
+                                         .searchBox__form
+                                             .form-group.w28
+                                                 label Flight Number
+                                                 input.form-control.form-control-lg(type='text' placeholder='Flight Number')
+                                             .form-group.w25
+                                                 label Depart
+                                                 button.btn.btn-orange.btn-lg.w-100(type='button')
+                                                     span Yesterday Apr 19
+                                             .form-group.w25
+                                                 label Depart
+                                                 button.btn.btn-outline.btn-lg.w-100(type='button')
+                                                     span Today Apr 20
+                                             .form-group.w25
+                                                 button.btn.btn-outline.btn-lg.w-100(type='button')
+                                                     span Tomorrow Apr 21
+                                             .searchBox__btn
+                                                 a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND FLIGHTS
         include jades/footer
         script(src='js/jquery-3.3.1.min.js')
         script(src='js/popper.min.js')
@@ -185,11 +453,11 @@ html(lang="vi")
                 $(this).next('.camNavbar__sub').slideToggle(200);
             });
         script.
-            if (screen.width <= 768) {
+            // searchBox
+            if (screen.width < 768) {
                 $('.searchBox__item').removeClass('open');
                 $('.searchBox__tab li').removeClass('active');
             };
-        script.
             $(".searchBox__tab button").click(function () {
                 var tab_id = $(this).parents('.searchBox__tab li').attr('data-tab');
 
@@ -203,7 +471,6 @@ html(lang="vi")
                 $('.searchBox__tab li').removeClass('active');
                 $('.searchBox__item').removeClass('open');
             });
-        script.
             if (screen.width >= 768) {
                 $(".inputSvg .form-control").click(function () {
                     $(this).parents('.form-group').find('.suggestDefault').addClass('open');
@@ -225,6 +492,33 @@ html(lang="vi")
                 if (!suggestPlace.is(e.target) && suggestPlace.has(e.target).length === 0) {
                     $('.suggestPlace').removeClass('open');
                 };
+            });
+            $(".btnPromotion").click(function () {
+                $('.searchBox__promotion').addClass('show');
+                $(this).addClass('hidden');
+            });
+
+            $("#fl1").click(function () {
+                $('.noMulti').removeClass('hidden');
+                $('.multi').addClass('hidden');
+                $('#return').removeClass('disabled');
+            });
+            $("#fl2").click(function () {
+                $('.noMulti').removeClass('hidden');
+                $('.multi').addClass('hidden');
+                $('#return').addClass('disabled');
+            });
+            $("#fl3").click(function () {
+                $('.noMulti').addClass('hidden');
+                $('.multi').removeClass('hidden');
+            });
+            $("#r1").click(function () {
+                $('.route').removeClass('hidden');
+                $('.flightNumber').addClass('hidden');
+            });
+            $("#r2").click(function () {
+                $('.route').addClass('hidden');
+                $('.flightNumber').removeClass('hidden');
             });
 
 

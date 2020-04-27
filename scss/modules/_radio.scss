@@ -12,6 +12,10 @@
     @include breakpoint(sm){
       font-size: 1vw;
       padding-left: 2vw;
+      transition: all .2s;
+      &:hover{
+        color: $orange;
+      }
     }
   }
   input[type="radio"] + label:before {

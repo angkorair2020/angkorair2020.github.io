@@ -103,9 +103,58 @@ h5{
 .colorGray{
   color: $gray;
 }
+.colorBlack85{
+  color: $black85;
+}
+.colorBlack75{
+  color: $black75;
+}
+.colorBlack65{
+  color: $black65;
+}
+.colorBlack55{
+  color: $black55;
+}
+.colorBlack45{
+  color: $black45;
+}
+.colorBlack35{
+  color: $black35;
+}
+.colorBlack25{
+  color: $black25;
+}
+.colorBlack15{
+  color: $black15;
+}
+.colorBlack5{
+  color: $black5;
+}
+
+.text14{
+  font-size: 14px;
+  @include breakpoint(sm){
+    font-size: 1vw;
+  }
+}
+.text16{
+  font-size: 16px;
+  @include breakpoint(sm){
+    font-size: 1.1vw;
+  }
+}
+.text18{
+  font-size: 16px;
+  @include breakpoint(sm){
+    font-size: 1.2vw;
+  }
+}
 
 .semibold{
   font-weight: $semibold;
+}
+.medium{
+  font-weight: $medium;
 }
 .w-33{
   width: 33.333% !important;
@@ -141,6 +190,12 @@ h5{
       margin-left: .5vw;
     }
   }
+}
+.hidden{
+  display: none!important;
+}
+.show{
+  display: block!important;
 }
 
 
