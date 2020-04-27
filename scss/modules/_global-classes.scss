@@ -163,16 +163,19 @@ h5{
 .svg1{
   @include breakpoint(only-ipad){
     width: 1vw;
+    height: 1vw;
   }
 }
 .svg1point5{
   @include breakpoint(only-ipad){
     width: 1.5vw;
+    height: 1.5vw;
   }
 }
 .svg2{
   @include breakpoint(only-ipad){
     width: 2vw;
+    height: 2vw;
   }
 }
 

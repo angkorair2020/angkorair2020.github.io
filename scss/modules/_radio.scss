@@ -22,7 +22,6 @@
     content: "";
     width: 16px;
     height: 16px;
-    line-height: 16px;
     position: absolute;
     left: 0;
     top:3px;
@@ -34,7 +33,7 @@
     @include breakpoint(sm){
       width: 1.2vw;
       height: 1.2vw;
-      line-height: 1.2vw;
+      top: 1px;
     }
   }
   input[type="radio"]:checked + label:before {

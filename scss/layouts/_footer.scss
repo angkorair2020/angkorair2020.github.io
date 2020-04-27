@@ -37,6 +37,9 @@
         padding: 0 1vw;
       }
       li{
+        @include breakpoint(only-ipad){
+          line-height: 1.1;
+        }
         &.liTitle{
           font-size: 16px;
           margin-bottom: 5px;
