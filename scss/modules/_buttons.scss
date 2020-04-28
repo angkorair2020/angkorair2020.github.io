@@ -68,3 +68,18 @@
     }
   }
 }
+.viewMore{
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  color: #318FDB;
+  @include breakpoint(sm){
+    font-size: 1vw;
+  }
+  span{
+    margin-right: 20px;
+    @include breakpoint(sm){
+      margin-right: 1vw;
+    }
+  }
+}

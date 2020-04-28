@@ -40,6 +40,12 @@ h5{
     margin-bottom: 1vw;
   }
 }
+.mb30{
+  margin-bottom: 30px;
+  @include breakpoint(sm){
+    margin-bottom: 2vw;
+  }
+}
 
 .mt5{
   margin-top: 5px;

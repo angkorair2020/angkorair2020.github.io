@@ -1,10 +1,11 @@
 .homeBanner{
   @include breakpoint(xs){
-
+    margin-bottom: 30px;
   }
   @include breakpoint(sm){
     padding: 13vw 0;
     position: relative;
+    margin-bottom: 4vw;
   }
   &__img{
     background:rgba(102, 47, 142, 0.3);
@@ -30,6 +31,256 @@
   .container{
     @include breakpoint(sm){
       position: relative;
+    }
+  }
+}
+.offersBox{
+  margin-bottom: 30px;
+  @include breakpoint(sm){
+    margin-bottom: 4vw;
+  }
+  &__slide{
+    @include breakpoint(xs){
+      padding-bottom: 40px;
+    }
+    @include breakpoint(sm){
+      margin: 0 -1vw;
+    }
+    .slick-dots{
+      @include breakpoint(sm){
+        display: none!important;
+      }
+    }
+    .slick-arrow{
+      @include breakpoint(xs){
+        display: none;
+      }
+    }
+  }
+  &__col{
+    @include breakpoint(sm){
+      padding: 0 1vw;
+    }
+  }
+  &__item{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    @include breakpoint(sm){
+      margin-bottom: 2vw;
+    }
+  }
+  &__img{
+    display: block;
+    width: 100%;
+    height: 192px;
+    @include breakpoint(sm){
+      height: 13vw;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__cont{
+    padding: 15px;
+    @include breakpoint(sm){
+      padding: 1vw;
+    }
+  }
+  &__link{
+    font-size: 18px;
+    color: $black85;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    @include breakpoint(sm){
+      font-size: 1.2vw;
+      margin-bottom: .5vw;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__icon{
+    font-size: 14px;
+    color: $black55;
+    @include breakpoint(sm){
+      font-size: 1vw;
+    }
+    svg,span{
+      vertical-align: middle;
+    }
+    span{
+      margin-left: 10px;
+      @include breakpoint(sm){
+        margin-left: .5vw;
+      }
+    }
+  }
+  &__price{
+    font-size: 14px;
+    color: $purple;
+    @include breakpoint(sm){
+      font-size: 1vw;
+    }
+    svg,span{
+      vertical-align: middle;
+    }
+    span{
+      margin-left: 10px;
+      @include breakpoint(sm){
+        margin-left: .5vw;
+      }
+    }
+  }
+  &__more{
+    @include breakpoint(xs){
+      text-align: center;
+      padding: 15px 0;
+      border-bottom: 1px solid $black25;
+      border-top: 1px solid $black25;
+    }
+    @include breakpoint(sm){
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+.servicesBox{
+  background-color: #f2f2f2;
+  padding: 30px 0;
+  @include breakpoint(sm){
+    padding: 4vw 0;
+  }
+  &__item{
+    display: block;
+    position: relative;
+    background: rgba(102,47,142,.3);
+    border-radius: 4px;
+    overflow: hidden;
+    @include breakpoint(xs){
+      height: 240px;
+    }
+    @include breakpoint(sm){
+      width: 100%;
+      height: 22vw;
+      margin-bottom: 2vw;
+    }
+    &.servicesBox_lg{
+      @include breakpoint(sm){
+        height: 29vw;
+      }
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: multiply;
+    }
+  }
+  &__cont{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    @include breakpoint(sm){
+      bottom: 2vw;
+      left: 2vw;
+      right: 2vw;
+    }
+    h4{
+      color: $orange;
+      margin-bottom: 5px;
+      @include breakpoint(sm){
+        margin-bottom: .5vw;
+      }
+    }
+    p{
+      color: #fff;
+      font-size: 14px;
+      @include breakpoint(sm){
+        font-size: 1vw;
+      }
+    }
+  }
+  .row{
+    @include breakpoint(xs){
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  .col-6,.col-4{
+    @include breakpoint(xs){
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+.promoBanner{
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(102,47,142,.65);;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  @include breakpoint(xs){
+    background-color: rgba(102,47,142,.35);;
+  }
+  @include breakpoint(sm){
+    padding: 2vw 0;
+  }
+  &__cont{
+    text-align: center;
+    p{
+      font-weight: 500;
+      color: #fff;
+      &.p1{
+        font-size: 14px;
+        text-transform: uppercase;
+        @include breakpoint(sm){
+          font-size: 1.3vw;
+        }
+      }
+      &.p2{
+        font-size: 20px;
+        text-transform: uppercase;
+        margin: 10px 0;
+        @include breakpoint(sm){
+          margin: .7vw 0;
+          font-size: 2vw;
+        }
+      }
+      &.p3{
+        font-weight: 400;
+        font-size: 14px;
+        @include breakpoint(sm){
+          font-size: 1.1vw;
+        }
+      }
+    }
+    .btn{
+      width: 170px;
+      margin: 15px auto 0;
+      @include breakpoint(sm){
+        width: 13vw;
+        margin-top: 1vw;
+      }
     }
   }
 }

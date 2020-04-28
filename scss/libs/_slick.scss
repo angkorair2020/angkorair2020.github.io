@@ -131,22 +131,29 @@ $slick-opacity-not-active: 0.25 !default;
   top: 50%;
   transform: translate(0, -50%);
   padding: 0;
-  border: none;
+  border: 2px solid rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
   outline: none;
   z-index: 1;
   @media (min-width: 768px){
-    width: 2.6vw;
-    height: 2.6vw;
+    width: 2.3vw;
+    height: 2.3vw;
+    &:hover{
+      border-color: #F79320;
+      &:before{
+        color: #F79320;
+      }
+    }
   }
   &:before {
     font-family: $slick-font-family;
     font-size: 20px;
-    color: $slick-arrow-color;
+    color: rgba(0, 0, 0, 0.35);
     font-weight: 900;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     @media (min-width: 768px){
-      font-size: 1.5vw;
+      font-size: 1.1vw;
     }
   }
 }
@@ -154,7 +161,7 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-prev {
   left:0;
   @media (min-width: 768px){
-    left: -2vw;
+    left: -3vw;
   }
   &:before {
     content: $slick-prev-character;
@@ -164,7 +171,7 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-next {
   right:0;
   @media (min-width: 768px){
-    right: -2vw;
+    right: -3vw;
   }
   &:before {
     content: $slick-next-character;
@@ -215,7 +222,7 @@ $slick-opacity-not-active: 0.25 !default;
       font-size: 0;
       width: 10px;
       height: 10px;
-      background: #979797;
+      background: #FBCA7E;
       cursor: pointer;
       border-radius: 50%;
       @media (min-width: 768px){
@@ -224,7 +231,7 @@ $slick-opacity-not-active: 0.25 !default;
       }
     }
     &.slick-active button {
-      background: #fff;
+      background: #F79320;
     }
   }
 }
