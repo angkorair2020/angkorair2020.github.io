@@ -20,7 +20,7 @@
         width: 240px;
       }
       @include breakpoint(sm){
-        width: 20vw;
+        width: 18vw;
       }
       &.imgDesktop{
         @include breakpoint(xs){

@@ -89,3 +89,31 @@
     }
   }
 }
+.inputSelect{
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  @include breakpoint(sm){
+    margin-bottom: 1vw;
+  }
+  select{
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: $black65;
+    margin: 0 10px;
+    @include breakpoint(sm){
+      font-size: 1vw;
+      margin: 0 1vw 0 .5vw;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  input{
+    border: none;
+    background: transparent;
+    flex: 1 1 auto;
+  }
+}
