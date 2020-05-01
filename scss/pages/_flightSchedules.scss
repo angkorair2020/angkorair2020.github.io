@@ -1,0 +1,130 @@
+.flightSchedules{
+  &__header{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(102, 47, 142, 0.6);
+    background-blend-mode: multiply;
+    padding: 15px 0;
+    @include breakpoint(sm){
+      padding: 1vw 0;
+    }
+    .container{
+      @include breakpoint(sm){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    .editBtn{
+      @include breakpoint(xs){
+        margin-top: 15px;
+      }
+    }
+  }
+  &__name{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    @include breakpoint(sm){
+      font-size: 1.1vw;
+    }
+    span{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    svg{
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 15px;
+      @include breakpoint(sm){
+        margin: 0 1vw;
+      }
+    }
+  }
+  &__date{
+
+  }
+  &__body{
+    padding: 30px 0;
+    @include breakpoint(sm){
+      padding: 3vw 0;
+    }
+  }
+  &__title{
+    margin-bottom: 24px;
+    @include breakpoint(sm){
+      margin-bottom: 1.5vw;
+    }
+  }
+  &__desktop{
+    @include breakpoint(xs){
+      display: none;
+    }
+    .table{
+      th{
+        background-color: $purple;
+        color: #fff;
+        vertical-align: middle;
+        white-space: nowrap;
+        border-bottom: .5vw solid #e5e5e5;
+        border-top: none;
+      }
+      td{
+        background-color: #fff;
+        vertical-align: middle;
+        border-bottom: 1vw solid #e5e5e5;
+        border-top: none;
+        &.active{
+          background-color: rgba(242, 216, 248, 0.6);
+        }
+      }
+    }
+  }
+  &__mobile{
+    @include breakpoint(sm){
+      display: none;
+    }
+    .table{
+      th{
+        background-color: $purple;
+        color: #fff;
+        vertical-align: middle;
+        border-bottom: none;
+        border-top: none;
+      }
+      td{
+        background-color: #fff;
+        vertical-align: middle;
+        border-bottom: 15px solid #e5e5e5;
+        border-top: none;
+      }
+    }
+
+  }
+}
+.schedulesSelect{
+  color: $purple;
+  font-size: 14px;
+  width: 100%;
+  @include breakpoint(sm){
+    font-size: 1vw;
+  }
+  p{
+    margin-top: 5px;
+    @include breakpoint(sm){
+      margin-top: .5vw;
+    }
+  }
+}
+.modal-schedules{
+  &__cont{
+    padding: 30px 0;
+    @include breakpoint(sm){
+      padding: 2vw 0;
+    }
+    h2{
+      text-align: center;
+    }
+  }
+}

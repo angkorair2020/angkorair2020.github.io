@@ -136,7 +136,15 @@ h5{
 .colorBlack5{
   color: $black5;
 }
-
+.colorWhite{
+  color: #fff;
+}
+.text12{
+  font-size: 12px;
+  @include breakpoint(sm){
+    font-size: .9vw;
+  }
+}
 .text14{
   font-size: 14px;
   @include breakpoint(sm){

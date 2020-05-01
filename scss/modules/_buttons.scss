@@ -7,13 +7,13 @@
   font-weight: 500;
   @include breakpoint(xs){
     font-size: 14px;
-    height: 32px;
+    height: 36px;
     padding: 0 15px;
   }
   @include breakpoint(sm){
     font-size: 1vw;
     padding: 0 1vw;
-    height: 2.3vw;
+    height: 2.5vw;
   }
   &:focus{
     outline: none;
@@ -80,6 +80,27 @@
     margin-right: 20px;
     @include breakpoint(sm){
       margin-right: 1vw;
+    }
+  }
+}
+.editBtn{
+  .btn{
+    text-transform: uppercase;
+    width: 150px;
+    @include breakpoint(sm){
+      width: 10vw;
+    }
+  }
+}
+.dateBtn{
+  &__item{
+    @include breakpoint(xs){
+      margin-bottom: 15px;
+    }
+    .btn{
+      width: 100%;
+      border-color: $orange-1;
+      color: $orange-1;
     }
   }
 }

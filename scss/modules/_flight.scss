@@ -1,0 +1,45 @@
+.flTimes{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  @include breakpoint(sm){
+    margin-bottom: 1vw;
+  }
+  svg{
+    margin: 0 15px;
+    @include breakpoint(sm){
+      margin: 0 1vw;
+    }
+  }
+}
+.flCode{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  @include breakpoint(sm){
+    margin-bottom: 1vw;
+  }
+  svg{
+    margin-right: 15px;
+    @include breakpoint(sm){
+      margin-right: 1vw;
+    }
+  }
+}
+.flAirline{
+  display: flex;
+  align-items: flex-start;
+  img{
+    width: 30px;
+    display: block;
+    @include breakpoint(sm){
+      width: 2vw;
+    }
+  }
+  p{
+    margin-left: 10px;
+    @include breakpoint(sm){
+      margin-left: .7vw;
+    }
+  }
+}

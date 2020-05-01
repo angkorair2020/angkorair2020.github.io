@@ -1,0 +1,31 @@
+.table{
+  th{
+    font-weight: 500;
+    font-size: 14px;
+    padding: 15px;
+    @include breakpoint(sm){
+      font-size: 1vw;
+      padding: 1vw ;
+    }
+    &:first-child{
+      border-top-left-radius: 4px;
+      @include breakpoint(sm){
+        border-top-left-radius: .5vw;
+      }
+    }
+    &:last-child{
+      border-top-right-radius: 4px;
+      @include breakpoint(sm){
+        border-top-right-radius: .5vw;
+      }
+    }
+  }
+  td{
+    font-size: 14px;
+    padding: 15px;
+    @include breakpoint(sm){
+      font-size: 1vw;
+      padding: 1vw ;
+    }
+  }
+}

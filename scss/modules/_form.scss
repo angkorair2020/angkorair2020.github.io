@@ -48,12 +48,6 @@
   }
 }
 
-.close{
-  font-size: 18px;
-  @include breakpoint(sm){
-    font-size: 1.2vw;
-  }
-}
 .form-group{
   @include breakpoint(xs){
     margin-bottom: 15px;
