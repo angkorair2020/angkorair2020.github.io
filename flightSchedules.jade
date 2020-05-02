@@ -8,10 +8,10 @@ html(lang="vi")
 
         main.wrapper
             section.flightSchedules
-                .flightSchedules__header(style='background-image: url("images/schedules-bg.jpg");')
+                .flHeader(style='background-image: url("images/schedules-bg.jpg");')
                     .container
                         .d-block
-                            .flightSchedules__name
+                            .flHeader__name
                                 span Hanoi (HAN), Vietnam
                                 svg.svg1point5(width='19', height='9', viewBox='0 0 19 9', fill='none', xmlns='http://www.w3.org/2000/svg')
                                     path(d='M19 4.33576L15 0.0340576V3.26033H0V5.41118H15V8.63745L19 4.33576Z', fill='white')
@@ -22,12 +22,12 @@ html(lang="vi")
                                 span edit
                 .flightSchedules__body
                     .container
-                        .flightSchedules__title
+                        .flTitle
                             h2.mb15 Flight Schedules for HAN to BKK
                             p.text16.colorBlack55 Review the status of the flights that match your search.
                         // flightSchedules__desktop show of desktop
                         .flightSchedules__desktop
-                            table.table
+                            table.table.table-flight
                                 thead
                                     tr
                                         th DEP TIME
@@ -307,7 +307,7 @@ html(lang="vi")
                                                 p Select
                         // flightSchedules__mobile show of mobile
                         .flightSchedules__mobile
-                            table.table
+                            table.table.table-flight-mobile
                                 thead
                                     tr
                                         th DEPART

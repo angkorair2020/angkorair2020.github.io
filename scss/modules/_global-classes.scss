@@ -214,7 +214,13 @@ h5{
 .show{
   display: block!important;
 }
-
-
-
-
+.inline-block{
+  display: inline-block;
+  vertical-align: middle;
+}
+.mrl15{
+  margin: 0 15px;
+  @include breakpoint(sm){
+    margin: 0 1vw;
+  }
+}

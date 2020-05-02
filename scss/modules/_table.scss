@@ -28,4 +28,38 @@
       padding: 1vw ;
     }
   }
+  &.table-flight{
+    th{
+      background-color: $purple;
+      color: #fff;
+      vertical-align: middle;
+      white-space: nowrap;
+      border-bottom: .5vw solid #e5e5e5;
+      border-top: none;
+    }
+    td{
+      background-color: #fff;
+      vertical-align: middle;
+      border-bottom: 1vw solid #e5e5e5;
+      border-top: none;
+      &.active{
+        background-color: rgba(242, 216, 248, 0.6);
+      }
+    }
+  }
+  &.table-flight-mobile{
+    th{
+      background-color: $purple;
+      color: #fff;
+      vertical-align: middle;
+      border-bottom: none;
+      border-top: none;
+    }
+    td{
+      background-color: #fff;
+      vertical-align: middle;
+      border-bottom: 15px solid #e5e5e5;
+      border-top: none;
+    }
+  }
 }

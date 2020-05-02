@@ -43,3 +43,83 @@
     }
   }
 }
+.flHeader{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(102, 47, 142, 0.6);
+  background-blend-mode: multiply;
+  padding: 15px 0;
+  @include breakpoint(sm){
+    padding: 1vw 0;
+  }
+  &__name{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    @include breakpoint(sm){
+      font-size: 1.1vw;
+    }
+    span{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    svg{
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 15px;
+      @include breakpoint(sm){
+        margin: 0 1vw;
+      }
+    }
+  }
+  .container{
+    @include breakpoint(sm){
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .editBtn{
+    @include breakpoint(xs){
+      margin-top: 15px;
+    }
+  }
+}
+.flTitle{
+  margin-bottom: 24px;
+  @include breakpoint(sm){
+    margin-bottom: 1.5vw;
+  }
+}
+.nonStop{
+  display: flex;
+  @include breakpoint(sm){
+    margin-top: 1vw;
+  }
+  &__item{
+    width: 50%;
+  }
+  &__label{
+    background-color: #81BE33;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    padding: 2px 5px;
+    margin-bottom: 5px;
+    @include breakpoint(sm){
+      font-size: 1vw;
+      padding: .1vw .5vw;
+      margin-bottom: .5vw;
+    }
+    span{
+      margin-left: 5px;
+      @include breakpoint(sm){
+        margin-left: .5vw;
+      }
+    }
+  }
+}
