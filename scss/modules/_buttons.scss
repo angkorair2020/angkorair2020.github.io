@@ -76,6 +76,7 @@
   @include breakpoint(sm){
     font-size: 1vw;
     &:hover{
+      color: #318FDB;
       span{
         text-decoration: underline;
       }

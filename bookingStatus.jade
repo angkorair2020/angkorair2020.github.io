@@ -1,0 +1,62 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .layoutInfo__banner(style='background-image: url("../images/layoutInfo__banner.jpg");')
+                    .container
+                        h2 Hello. How can Cambodia help you?
+                .layoutInfo__body
+                    .container
+                        h2.mb15 Manage Booking
+                        .layoutInfo__box
+                            ul.layoutInfo__navbar
+                                li.active
+                                    a(href='bookingStatus.html')
+                                        span Booking status
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='refundRequest.html')
+                                        span Refund request
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='fareRules.html')
+                                        span Fare rules
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='bookingChange.html')
+                                        span Booking change
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                            .layoutInfo__cont
+
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            $('.camNavbar__link').click(function () {
+                $(this).next('.camNavbar__sub').slideToggle(200);
+            });
+
+
+
+

@@ -193,7 +193,8 @@
       left: 0;
       z-index: 10;
       background-color: #fff;
-      box-shadow: 0px 1px 8px rgba(0,0,0,.15);
+      box-shadow: 0 1px 8px rgba(0,0,0,.15);
+      border-bottom: 4px solid $purple;
       min-width: 15vw;
       border-radius: 3px;
       transition: all .3s;
@@ -271,6 +272,9 @@
       @include breakpoint(sm){
         margin-left: .5vw;
       }
+    }
+    img{
+      border-radius: 2px;
     }
   }
   .dropdown-menu{
