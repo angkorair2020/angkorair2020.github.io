@@ -111,3 +111,10 @@
     flex: 1 1 auto;
   }
 }
+textarea.form-control{
+  resize: none;
+  height: 120px;
+  @include breakpoint(sm){
+    height: 6.5vw;
+  }
+}
