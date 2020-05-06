@@ -87,32 +87,6 @@ html(lang="vi")
                 $(this).next('.camNavbar__sub').slideToggle(200);
             });
         script.
-            // searchBox
-            if (screen.width >= 768) {
-                $(".inputSvg .form-control").click(function () {
-                    $(this).parents('.form-group').find('.suggestDefault').addClass('open');
-                });
-                $(document).mouseup(function (e) {
-                    var suggestDefault = $('.suggestDefault');
-                    if (!suggestDefault.is(e.target) && suggestDefault.has(e.target).length === 0) {
-                        $('.suggestDefault').removeClass('open');
-                    }
-                    ;
-                });
-            };
-
-            $(".inputSvg .form-control").on('input', function () {
-                $(this).parents('.form-group').find('.suggestDefault').removeClass('open');
-                $(this).parents('.form-group').find('.suggestPlace').addClass('open');
-            });
-            $(document).mouseup(function (e) {
-                var suggestPlace = $('.suggestPlace');
-                if (!suggestPlace.is(e.target) && suggestPlace.has(e.target).length === 0) {
-                    $('.suggestPlace').removeClass('open');
-                }
-                ;
-            });
-        script.
             $('.viewMore').click(function () {
                 var statusShow = $(this).parents('tr').find('.statusShow');
                 if(statusShow.hasClass('show')){
