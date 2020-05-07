@@ -10,6 +10,71 @@
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
     height: 4vw;
   }
+  &.header_home{
+    @include breakpoint(sm){
+      background-color: rgba(102, 47, 142, 0.8);
+
+    }
+    .camNavbar{
+      &__nav{
+        > li{
+          > a{
+            color: #fff;
+            svg{
+              path{
+                fill: #fff;
+              }
+            }
+          }
+        }
+      }
+      &__other{
+        .inputSearch{
+          .form-control{
+            @include breakpoint(sm){
+              background: transparent;
+              color: #fff;
+              border-color: #fff;
+              &::-webkit-input-placeholder {color:#fff;}
+              &::-moz-placeholder {color:#fff;}
+              &:-ms-input-placeholder {color:#fff;}
+              &:-moz-placeholder {color:#fff;}
+            }
+          }
+          svg{
+            @include breakpoint(sm){
+              path{
+                fill: #fff;
+              }
+            }
+          }
+        }
+        .langBox{
+          .dropdown-toggle{
+            svg{
+              @include breakpoint(sm){
+                path{
+                  fill: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+      &__logo{
+        .imgMobile{
+          @include breakpoint(sm){
+            display: block;
+          }
+        }
+        .imgDesktop{
+          @include breakpoint(sm){
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 .logo{
   a{
@@ -139,6 +204,16 @@
           .camNavbar__sub{
             opacity: 1;
             visibility: visible;
+          }
+        }
+      }
+      &.active{
+        > a{
+          color: $orange!important;
+          svg{
+            path{
+              fill: $orange!important;
+            }
           }
         }
       }
