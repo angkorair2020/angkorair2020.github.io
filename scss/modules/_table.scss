@@ -36,6 +36,18 @@
       white-space: nowrap;
       border-bottom: .5vw solid #e5e5e5;
       border-top: none;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      button,a{
+        color: #fff;
+        font-weight: 500;
+        margin-left: .5vw;
+        font-size: 1vw;
+        svg{
+          display: block;
+        }
+      }
     }
     td{
       background-color: #fff;
@@ -46,6 +58,13 @@
         background-color: rgba(242, 216, 248, 0.6);
       }
     }
+    .cheapSchedules & {
+      td{
+        &:last-child{
+          border-left: 1px dashed rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
   }
   &.table-flight-mobile{
     th{
@@ -54,12 +73,31 @@
       vertical-align: middle;
       border-bottom: none;
       border-top: none;
+      &:last-child{
+        text-align: right;
+      }
+      button,a{
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 5px;
+        svg{
+          display: block;
+        }
+      }
     }
     td{
       background-color: #fff;
       vertical-align: middle;
       border-bottom: 15px solid #e5e5e5;
       border-top: none;
+    }
+    .cheapSchedules & {
+      td{
+        background: transparent;
+        padding: 0;
+        border-bottom: none;
+      }
     }
   }
 }

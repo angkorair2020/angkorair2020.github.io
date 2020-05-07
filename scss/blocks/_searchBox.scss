@@ -81,6 +81,11 @@
         }
       }
     }
+    .flightCheap & {
+      @include breakpoint(sm){
+        display: none;
+      }
+    }
   }
   &__item{
     background: #fff;
@@ -110,6 +115,11 @@
       }
       @include breakpoint(sm){
         display: block;
+      }
+    }
+    .flightCheap & {
+      @include breakpoint(sm){
+        border-radius: 4px;
       }
     }
   }
