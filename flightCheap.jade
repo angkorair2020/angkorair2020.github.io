@@ -7,10 +7,10 @@ html(lang="vi")
         include jades/header
 
         main.wrapper
-            section.home
+            section.flightCheap
                 .homeBanner
                     .homeBanner__img
-                        img(src='images/homeBanner.jpg')
+                        img(src='images/cheapBanner.jpg')
                     .container
                         .searchBox
                             ul.searchBox__tab
@@ -606,325 +606,24 @@ html(lang="vi")
                                             .searchBox__btn
                                                 a.btn.btn-orange-1.btn-lg(href='flightStatus_route.html') FIND FLIGHTS
                                     .flightNumber.hidden
-                                         .searchBox__form
-                                             .form-group.w28
-                                                 label Flight Number
-                                                 input.form-control.form-control-lg(type='text' placeholder='Flight Number')
-                                             .form-group.w25
-                                                 label Depart
-                                                 button.btn.btn-orange.btn-lg.w-100(type='button')
-                                                     span Yesterday Apr 19
-                                             .form-group.w25
-                                                 label Depart
-                                                 button.btn.btn-outline.btn-lg.w-100(type='button')
-                                                     span Today Apr 20
-                                             .form-group.w25
-                                                 button.btn.btn-outline.btn-lg.w-100(type='button')
-                                                     span Tomorrow Apr 21
-                                             .searchBox__btn
-                                                 a.btn.btn-orange-1.btn-lg(href='flightStatus_number.html') FIND FLIGHTS
-                .offersBox
-                    .container
-                        h2.text-center.mb30 VIEW THE LATEST OFFERS DEPARTING FROM
-                        .offersBox__slide
-                            .offersBox__col
-                                .offersBox__item
-                                    a.offersBox__img(href='flightCheap.html')
-                                        img(src='images/offer-1.jpg')
-                                    .offersBox__cont
-                                        a.offersBox__link(href='flightCheap.html') From Phnom Penh to Sapa
-                                        .offersBox__line
-                                            p.offersBox__icon
-                                                svg.svg1point5(width='19', height='20', viewBox='0 0 19 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                    path(d='M19 14V12L11 7V1.5C11 1.10218 10.842 0.720644 10.5607 0.43934C10.2794 0.158035 9.89782 0 9.5 0C9.10218 0 8.72064 0.158035 8.43934 0.43934C8.15804 0.720644 8 1.10218 8 1.5V7L0 12V14L8 11.5V17L6 18.5V20L9.5 19L13 20V18.5L11 17V11.5L19 14Z', fill='black', fill-opacity='0.45')
-                                                span One Way
-                                            p.offersBox__price
-                                                svg.svg1point5(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                    path(d='M3.5 5C3.10218 5 2.72064 4.84196 2.43934 4.56066C2.15804 4.27936 2 3.89782 2 3.5C2 3.10218 2.15804 2.72064 2.43934 2.43934C2.72064 2.15804 3.10218 2 3.5 2C3.89782 2 4.27936 2.15804 4.56066 2.43934C4.84196 2.72064 5 3.10218 5 3.5C5 3.89782 4.84196 4.27936 4.56066 4.56066C4.27936 4.84196 3.89782 5 3.5 5ZM19.41 9.58L10.41 0.58C10.05 0.22 9.55 0 9 0H2C0.89 0 0 0.89 0 2V9C0 9.55 0.22 10.05 0.59 10.41L9.58 19.41C9.95 19.77 10.45 20 11 20C11.55 20 12.05 19.77 12.41 19.41L19.41 12.41C19.78 12.05 20 11.55 20 11C20 10.44 19.77 9.94 19.41 9.58Z', fill='#662F8E')
-                                                span USD 289
-                            .offersBox__col
-                                .offersBox__item
-                                    a.offersBox__img(href='flightCheap.html')
-                                        img(src='images/offer-2.jpg')
-                                    .offersBox__cont
-                                        a.offersBox__link(href='flightCheap.html') From Phnom Penh to Thailand
-                                        .offersBox__line
-                                            p.offersBox__icon
-                                                svg.svg1point5(width='19', height='20', viewBox='0 0 19 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                    path(d='M19 14V12L11 7V1.5C11 1.10218 10.842 0.720644 10.5607 0.43934C10.2794 0.158035 9.89782 0 9.5 0C9.10218 0 8.72064 0.158035 8.43934 0.43934C8.15804 0.720644 8 1.10218 8 1.5V7L0 12V14L8 11.5V17L6 18.5V20L9.5 19L13 20V18.5L11 17V11.5L19 14Z', fill='black', fill-opacity='0.45')
-                                                span Round Trip
-                                            p.offersBox__price
-                                                svg.svg1point5(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                    path(d='M3.5 5C3.10218 5 2.72064 4.84196 2.43934 4.56066C2.15804 4.27936 2 3.89782 2 3.5C2 3.10218 2.15804 2.72064 2.43934 2.43934C2.72064 2.15804 3.10218 2 3.5 2C3.89782 2 4.27936 2.15804 4.56066 2.43934C4.84196 2.72064 5 3.10218 5 3.5C5 3.89782 4.84196 4.27936 4.56066 4.56066C4.27936 4.84196 3.89782 5 3.5 5ZM19.41 9.58L10.41 0.58C10.05 0.22 9.55 0 9 0H2C0.89 0 0 0.89 0 2V9C0 9.55 0.22 10.05 0.59 10.41L9.58 19.41C9.95 19.77 10.45 20 11 20C11.55 20 12.05 19.77 12.41 19.41L19.41 12.41C19.78 12.05 20 11.55 20 11C20 10.44 19.77 9.94 19.41 9.58Z', fill='#662F8E')
-                                                span USD 289
-                            .offersBox__col
-                                .offersBox__item
-                                    a.offersBox__img(href='flightCheap.html')
-                                        img(src='images/offer-3.jpg')
-                                    .offersBox__cont
-                                        a.offersBox__link(href='flightCheap.html') From Phnom Penh to Japan
-                                        .offersBox__line
-                                            p.offersBox__icon
-                                                svg.svg1point5(width='19', height='20', viewBox='0 0 19 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                    path(d='M19 14V12L11 7V1.5C11 1.10218 10.842 0.720644 10.5607 0.43934C10.2794 0.158035 9.89782 0 9.5 0C9.10218 0 8.72064 0.158035 8.43934 0.43934C8.15804 0.720644 8 1.10218 8 1.5V7L0 12V14L8 11.5V17L6 18.5V20L9.5 19L13 20V18.5L11 17V11.5L19 14Z', fill='black', fill-opacity='0.45')
-                                                span One Way
-                                            p.offersBox__price
-                                                svg.svg1point5(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                    path(d='M3.5 5C3.10218 5 2.72064 4.84196 2.43934 4.56066C2.15804 4.27936 2 3.89782 2 3.5C2 3.10218 2.15804 2.72064 2.43934 2.43934C2.72064 2.15804 3.10218 2 3.5 2C3.89782 2 4.27936 2.15804 4.56066 2.43934C4.84196 2.72064 5 3.10218 5 3.5C5 3.89782 4.84196 4.27936 4.56066 4.56066C4.27936 4.84196 3.89782 5 3.5 5ZM19.41 9.58L10.41 0.58C10.05 0.22 9.55 0 9 0H2C0.89 0 0 0.89 0 2V9C0 9.55 0.22 10.05 0.59 10.41L9.58 19.41C9.95 19.77 10.45 20 11 20C11.55 20 12.05 19.77 12.41 19.41L19.41 12.41C19.78 12.05 20 11.55 20 11C20 10.44 19.77 9.94 19.41 9.58Z', fill='#662F8E')
-                                                span USD 289
-                            .offersBox__col
-                                .offersBox__item
-                                    a.offersBox__img(href='flightCheap.html')
-                                        img(src='images/offer-2.jpg')
-                                    .offersBox__cont
-                                        a.offersBox__link(href='flightCheap.html') From Phnom Penh to Thailand
-                                        .offersBox__line
-                                            p.offersBox__icon
-                                                svg.svg1point5(width='19', height='20', viewBox='0 0 19 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                    path(d='M19 14V12L11 7V1.5C11 1.10218 10.842 0.720644 10.5607 0.43934C10.2794 0.158035 9.89782 0 9.5 0C9.10218 0 8.72064 0.158035 8.43934 0.43934C8.15804 0.720644 8 1.10218 8 1.5V7L0 12V14L8 11.5V17L6 18.5V20L9.5 19L13 20V18.5L11 17V11.5L19 14Z', fill='black', fill-opacity='0.45')
-                                                span Round Trip
-                                            p.offersBox__price
-                                                svg.svg1point5(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                    path(d='M3.5 5C3.10218 5 2.72064 4.84196 2.43934 4.56066C2.15804 4.27936 2 3.89782 2 3.5C2 3.10218 2.15804 2.72064 2.43934 2.43934C2.72064 2.15804 3.10218 2 3.5 2C3.89782 2 4.27936 2.15804 4.56066 2.43934C4.84196 2.72064 5 3.10218 5 3.5C5 3.89782 4.84196 4.27936 4.56066 4.56066C4.27936 4.84196 3.89782 5 3.5 5ZM19.41 9.58L10.41 0.58C10.05 0.22 9.55 0 9 0H2C0.89 0 0 0.89 0 2V9C0 9.55 0.22 10.05 0.59 10.41L9.58 19.41C9.95 19.77 10.45 20 11 20C11.55 20 12.05 19.77 12.41 19.41L19.41 12.41C19.78 12.05 20 11.55 20 11C20 10.44 19.77 9.94 19.41 9.58Z', fill='#662F8E')
-                                                span USD 289
-                        .offersBox__more
-                            a.viewMore(href='#')
-                                span View More
-                                svg(width='12', height='8', viewBox='0 0 12 8', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                    path(d='M1.42 0.589843L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L-6.16331e-08 1.99984L1.42 0.589843Z', fill='#318FDB')
+                                        .searchBox__form
+                                            .form-group.w28
+                                                label Flight Number
+                                                input.form-control.form-control-lg(type='text' placeholder='Flight Number')
+                                            .form-group.w25
+                                                label Depart
+                                                button.btn.btn-orange.btn-lg.w-100(type='button')
+                                                    span Yesterday Apr 19
+                                            .form-group.w25
+                                                label Depart
+                                                button.btn.btn-outline.btn-lg.w-100(type='button')
+                                                    span Today Apr 20
+                                            .form-group.w25
+                                                button.btn.btn-outline.btn-lg.w-100(type='button')
+                                                    span Tomorrow Apr 21
+                                            .searchBox__btn
+                                                a.btn.btn-orange-1.btn-lg(href='flightStatus_number.html') FIND FLIGHTS
 
-                        .offersBox__featured
-                            h2.text-center.mb30 FEATURED FLIGHT DESTINATIONS
-                            ul
-                                li
-                                    a(href='flightCheap.html')
-                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
-                                        span Flights to Cebu
-
-                                li
-                                    a(href='flightCheap.html')
-                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
-                                        span Flights to Jakarta
-
-                                li
-                                    a(href='flightCheap.html')
-                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
-                                        span Flights to Hanoi
-
-                                li
-                                    a(href='flightCheap.html')
-                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
-                                        span Flights to Chengdu
-
-                                li
-                                    a(href='flightCheap.html')
-                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
-                                        span Flights to Phuket
-
-                                li
-                                    a(href='flightCheap.html')
-                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
-                                        span Flights to Macau
-
-                                li
-                                    a(href='flightCheap.html')
-                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
-                                        span Flights to Cebu
-
-                                li
-                                    a(href='flightCheap.html')
-                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
-                                        span Flights to Jakarta
-
-                                li
-                                    a(href='flightCheap.html')
-                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
-                                        span Flights to Hanoi
-
-                                li
-                                    a(href='flightCheap.html')
-                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
-                                        span Flights to Chengdu
-
-                                li
-                                    a(href='flightCheap.html')
-                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
-                                        span Flights to Phuket
-
-                                li
-                                    a(href='flightCheap.html')
-                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
-                                        span Flights to Macau
-
-                .servicesBox
-                    .container
-                        h2.text-center.mb30 EXTRA SERVICES
-                        .row
-                            .col-6
-                                a.servicesBox__item.servicesBox_lg(href='#')
-                                    img(src='images/service-1.jpg')
-                                    .servicesBox__cont
-                                        h4 HOTEL
-                                        p We have wide selection of hotels and promotions.
-
-                            .col-6
-                                a.servicesBox__item.servicesBox_lg(href='#')
-                                    img(src='images/service-2.jpg')
-                                    .servicesBox__cont
-                                        h4 TRANSPORTATION
-                                        p We provide information on airport transfer services, and car rentals.
-
-                            .col-4
-                                a.servicesBox__item(href='#')
-                                    img(src='images/service-3.jpg')
-                                    .servicesBox__cont
-                                        h4 TOURS
-                                        p Book sightseeing tours, attractions, excursions, things to do.
-
-                            .col-4
-                                a.servicesBox__item(href='#')
-                                    img(src='images/service-4.jpg')
-                                    .servicesBox__cont
-                                        h4 EXCESS BAGGAGE
-                                        p Baggage is always an important part of your journey.
-
-                            .col-4
-                                a.servicesBox__item(href='#')
-                                    img(src='images/service-5.jpg')
-                                    .servicesBox__cont
-                                        h4 VISA ON ARRIVAL
-                                        p Apply Visa On Arrival online through Internet to make your trip happen to Thailand.
-
-                .promoBanner(style='background-image: url("images/promoBanner.jpg");')
-                    .container
-                        .promoBanner__cont
-                            p.p1 SPECIAL PROMOTIONS
-                            p.p2 IT’S A GREAT REASON TO EXPERIENCE NEW PLACES
-                            p.p3
-                                | Specials and offers on Bangkok Airways flights for your holidays
-                                br
-                                | Customer support: cs@cambodiaangkorailines.com
-                            a.btn.btn-orange.btn-lg(href='#') BOOK NOW
-                .destination
-                    .container
-                        h2.text-center.mb30 FAVOURITE DESTINATIONS
-                        .destination__slide
-                            .destination__col
-                                .destination__item
-                                    .destination__img
-                                        img(src='images/dest-1.jpg')
-                                        .destination__btn
-                                            a.btn.btn-orange-1(href='#') READ MORE
-                                    .destination__cont
-                                        .destination__address
-                                            svg.svg1point5(width='14', height='20', viewBox='0 0 14 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                path(d='M7 9.5C6.33696 9.5 5.70107 9.23661 5.23223 8.76777C4.76339 8.29893 4.5 7.66304 4.5 7C4.5 6.33696 4.76339 5.70107 5.23223 5.23223C5.70107 4.76339 6.33696 4.5 7 4.5C7.66304 4.5 8.29893 4.76339 8.76777 5.23223C9.23661 5.70107 9.5 6.33696 9.5 7C9.5 7.3283 9.43534 7.65339 9.3097 7.95671C9.18406 8.26002 8.99991 8.53562 8.76777 8.76777C8.53562 8.99991 8.26002 9.18406 7.95671 9.3097C7.65339 9.43534 7.3283 9.5 7 9.5ZM7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0Z', fill='#318FDB')
-                                            span Bangkok, Thailand
-                                        a.destination__link(href='#') Bali is called as the island of the gods
-                                        p.destination__text The best time to travel to Bali is around April to July. However, this ...
-
-                            .destination__col
-                                .destination__item
-                                    .destination__img
-                                        img(src='images/dest-2.jpg')
-                                        .destination__btn
-                                            a.btn.btn-orange-1(href='#') READ MORE
-                                    .destination__cont
-                                        .destination__address
-                                            svg.svg1point5(width='14', height='20', viewBox='0 0 14 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                path(d='M7 9.5C6.33696 9.5 5.70107 9.23661 5.23223 8.76777C4.76339 8.29893 4.5 7.66304 4.5 7C4.5 6.33696 4.76339 5.70107 5.23223 5.23223C5.70107 4.76339 6.33696 4.5 7 4.5C7.66304 4.5 8.29893 4.76339 8.76777 5.23223C9.23661 5.70107 9.5 6.33696 9.5 7C9.5 7.3283 9.43534 7.65339 9.3097 7.95671C9.18406 8.26002 8.99991 8.53562 8.76777 8.76777C8.53562 8.99991 8.26002 9.18406 7.95671 9.3097C7.65339 9.43534 7.3283 9.5 7 9.5ZM7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0Z', fill='#318FDB')
-                                            span Chiang Mai, Thailand
-                                        a.destination__link(href='#') As part of the Maluku Islands in the East of Sulawesi and the ...
-                                        p.destination__text Admire the statue of the female warrior Christina Martha Tiahahu ...
-
-                            .destination__col
-                                .destination__item
-                                    .destination__img
-                                        img(src='images/dest-3.jpg')
-                                        .destination__btn
-                                            a.btn.btn-orange-1(href='#') READ MORE
-                                    .destination__cont
-                                        .destination__address
-                                            svg.svg1point5(width='14', height='20', viewBox='0 0 14 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                path(d='M7 9.5C6.33696 9.5 5.70107 9.23661 5.23223 8.76777C4.76339 8.29893 4.5 7.66304 4.5 7C4.5 6.33696 4.76339 5.70107 5.23223 5.23223C5.70107 4.76339 6.33696 4.5 7 4.5C7.66304 4.5 8.29893 4.76339 8.76777 5.23223C9.23661 5.70107 9.5 6.33696 9.5 7C9.5 7.3283 9.43534 7.65339 9.3097 7.95671C9.18406 8.26002 8.99991 8.53562 8.76777 8.76777C8.53562 8.99991 8.26002 9.18406 7.95671 9.3097C7.65339 9.43534 7.3283 9.5 7 9.5ZM7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0Z', fill='#318FDB')
-                                            span Phuket, Thailand
-                                        a.destination__link(href='#') Let's see why Balikpapan is so attractive to you
-                                        p.destination__text When it comes to Indonesia, you will definitely think of beautiful and ...
-
-                            .destination__col
-                                .destination__item
-                                    .destination__img
-                                        img(src='images/dest-4.jpg')
-                                        .destination__btn
-                                            a.btn.btn-orange-1(href='#') READ MORE
-                                    .destination__cont
-                                        .destination__address
-                                            svg.svg1point5(width='14', height='20', viewBox='0 0 14 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                path(d='M7 9.5C6.33696 9.5 5.70107 9.23661 5.23223 8.76777C4.76339 8.29893 4.5 7.66304 4.5 7C4.5 6.33696 4.76339 5.70107 5.23223 5.23223C5.70107 4.76339 6.33696 4.5 7 4.5C7.66304 4.5 8.29893 4.76339 8.76777 5.23223C9.23661 5.70107 9.5 6.33696 9.5 7C9.5 7.3283 9.43534 7.65339 9.3097 7.95671C9.18406 8.26002 8.99991 8.53562 8.76777 8.76777C8.53562 8.99991 8.26002 9.18406 7.95671 9.3097C7.65339 9.43534 7.3283 9.5 7 9.5ZM7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0Z', fill='#318FDB')
-                                            span Koh Samui, Thailand
-                                        a.destination__link(href='#') Located in the northern pole of Sumatra is the Banda Aceh...
-                                        p.destination__text Mesjid Raya Mosque is the first place you must definitely visit.
-
-                            .destination__col
-                                .destination__item
-                                    .destination__img
-                                        img(src='images/dest-2.jpg')
-                                        .destination__btn
-                                            a.btn.btn-orange-1(href='#') READ MORE
-                                    .destination__cont
-                                        .destination__address
-                                            svg.svg1point5(width='14', height='20', viewBox='0 0 14 20', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                path(d='M7 9.5C6.33696 9.5 5.70107 9.23661 5.23223 8.76777C4.76339 8.29893 4.5 7.66304 4.5 7C4.5 6.33696 4.76339 5.70107 5.23223 5.23223C5.70107 4.76339 6.33696 4.5 7 4.5C7.66304 4.5 8.29893 4.76339 8.76777 5.23223C9.23661 5.70107 9.5 6.33696 9.5 7C9.5 7.3283 9.43534 7.65339 9.3097 7.95671C9.18406 8.26002 8.99991 8.53562 8.76777 8.76777C8.53562 8.99991 8.26002 9.18406 7.95671 9.3097C7.65339 9.43534 7.3283 9.5 7 9.5ZM7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0Z', fill='#318FDB')
-                                            span Chiang Mai, Thailand
-                                        a.destination__link(href='#') As part of the Maluku Islands in the East of Sulawesi and the ...
-                                        p.destination__text Admire the statue of the female warrior Christina Martha Tiahahu ...
-
-                .appBox
-                    .container
-                        .row
-                            .col-7
-                                .appBox__cont
-                                    h2.mb30 YOUR ALL IN ONE FLIGHT BOOKING APP
-                                    p.text16.colorBlack65.mb15 Book flights, hotels, tours & rental cars anywhere in the world in just seconds. Get real-time flight updates, travel info, exclusive deals, and Special Promotions only on the app!
-                                    p.text16.colorBlack65.mb15 Enter your phone number to receive a text with a link to download our app
-                                    .appBox__group
-                                        .appBox__form
-                                            .inputSelect.form-control.form-control-lg
-                                                svg.svg1point5(width='18', height='18', viewBox='0 0 18 18', fill='none', xmlns='http://www.w3.org/2000/svg')
-                                                    path(d='M3.62 7.79C5.06 10.62 7.38 12.94 10.21 14.38L12.41 12.18C12.69 11.9 13.08 11.82 13.43 11.93C14.55 12.3 15.75 12.5 17 12.5C17.2652 12.5 17.5196 12.6054 17.7071 12.7929C17.8946 12.9804 18 13.2348 18 13.5V17C18 17.2652 17.8946 17.5196 17.7071 17.7071C17.5196 17.8946 17.2652 18 17 18C12.4913 18 8.1673 16.2089 4.97918 13.0208C1.79107 9.8327 0 5.50868 0 1C0 0.734784 0.105357 0.48043 0.292893 0.292893C0.48043 0.105357 0.734784 0 1 0H4.5C4.76522 0 5.01957 0.105357 5.20711 0.292893C5.39464 0.48043 5.5 0.734784 5.5 1C5.5 2.25 5.7 3.45 6.07 4.57C6.18 4.92 6.1 5.31 5.82 5.59L3.62 7.79Z', fill='black', fill-opacity='0.25')
-                                                select(style='background-image: url("../images/arrow-down.png");')
-                                                    option (+61)
-                                                    option (+62)
-                                                    option (+63)
-                                                input(type='text' placeholder='Phone number')
-                                            button.btn.btn-orange-1.btn-lg.w-100(type='button') SEND APP LINK
-                                        .appBox__line
-                                            span or
-                                        .appBox__download
-                                            .appBox__logo
-                                                a(href='#')
-                                                    img(src='images/googleplay.png')
-                                                a(href='#')
-                                                    img(src='images/appstore.png')
-                                            .appBox__qrcode
-                                                a(href='#')
-                                                    img(src='images/qrcode.png')
-
-                            .col-5
-                                .appBox__img
-                                    img(src='images/phone-img.png')
         include jades/footer
         script(src='js/jquery-3.3.1.min.js')
         script(src='js/popper.min.js')
@@ -999,58 +698,7 @@ html(lang="vi")
                 $('.route').addClass('hidden');
                 $('.flightNumber').removeClass('hidden');
             });
-        script.
-            $(".offersBox__slide").slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                //autoplay: true,
-                speed: 500,
-                autoplaySpeed: 5000,
-                arrows: true,
-                dots: true,
-                responsive: [
-                    {
-                        breakpoint: 767,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        script.
-            $(".destination__slide").slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                //autoplay: true,
-                speed: 500,
-                autoplaySpeed: 5000,
-                arrows: true,
-                dots: true,
-                responsive: [
-                    {
-                        breakpoint: 767,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        script.
-            $('.offersBox .viewMore').click(function () {
-                var featured = $(this).parents('.offersBox').find('.offersBox__featured');
-                if ($(this).hasClass('rotate')) {
-                    featured.slideUp(300);
-                    $(this).find('span').text('View More');
-                    $(this).removeClass('rotate');
-                } else {
-                    featured.slideDown(300);
-                    $(this).find('span').text('View Less');
-                    $(this).addClass('rotate');
-                }
-                return false;
-            });
+
 
 
 
