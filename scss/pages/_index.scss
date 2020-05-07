@@ -521,9 +521,6 @@
       display: flex;
     }
   }
-  &__form{
-
-  }
   &__line{
     display: flex;
     align-items: center;
@@ -599,6 +596,7 @@
     @include breakpoint(sm){
       display: flex;
       justify-content: center;
+      align-items: center;
     }
     img{
       width: 100%;
