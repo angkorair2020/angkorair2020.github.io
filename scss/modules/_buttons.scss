@@ -82,10 +82,10 @@
       }
     }
   }
-  span{
-    margin-right: 20px;
+  svg{
+    margin-left: 20px;
     @include breakpoint(sm){
-      margin-right: 1vw;
+      margin-left: 1vw;
     }
   }
 }

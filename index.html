@@ -1463,6 +1463,7 @@
       });
       $('.camNavbar__link').click(function () {
           $(this).next('.camNavbar__sub').slideToggle(200);
+          $(this).parent('li').toggleClass('active');
       });
     </script>
     <script>
@@ -1576,6 +1577,11 @@
           }
           return false;
       });
+    </script>
+    <script>
+      if (screen.width < 768) {
+          $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+      };
     </script>
   </body>
 </html>

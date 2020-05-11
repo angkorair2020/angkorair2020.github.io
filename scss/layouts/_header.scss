@@ -211,6 +211,9 @@
         > a{
           color: $orange!important;
           svg{
+            @include breakpoint(xs){
+              transform: rotate(180deg);
+            }
             path{
               fill: $orange!important;
             }
@@ -327,6 +330,7 @@
   img{
     width: 30px;
     display: block;
+    border-radius: 2px;
     @include breakpoint(sm){
       width: 2vw;
     }
@@ -347,9 +351,6 @@
       @include breakpoint(sm){
         margin-left: .5vw;
       }
-    }
-    img{
-      border-radius: 2px;
     }
   }
   .dropdown-menu{

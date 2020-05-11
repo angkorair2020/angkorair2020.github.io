@@ -942,6 +942,7 @@ html(lang="vi")
             });
             $('.camNavbar__link').click(function () {
                 $(this).next('.camNavbar__sub').slideToggle(200);
+                $(this).parent('li').toggleClass('active');
             });
         script.
             // searchBox
@@ -1051,6 +1052,10 @@ html(lang="vi")
                 }
                 return false;
             });
+        script.
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
 
 
 

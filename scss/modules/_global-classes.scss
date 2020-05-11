@@ -71,6 +71,18 @@ h5{
     margin-left: .5vw;
   }
 }
+.mr15{
+  margin-right: 15px;
+  @include breakpoint(sm){
+    margin-right: 1vw;
+  }
+}
+.mrl15{
+  margin: 0 15px;
+  @include breakpoint(sm){
+    margin: 0 1vw;
+  }
+}
 .bgGreen{
   background: $green;
 }
@@ -226,9 +238,4 @@ h5{
   display: inline-block;
   vertical-align: middle;
 }
-.mrl15{
-  margin: 0 15px;
-  @include breakpoint(sm){
-    margin: 0 1vw;
-  }
-}
+
