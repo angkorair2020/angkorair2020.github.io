@@ -7,13 +7,13 @@
   font-weight: 500;
   @include breakpoint(xs){
     font-size: 14px;
-    height: 36px;
+    height: 40px;
     padding: 0 15px;
   }
   @include breakpoint(sm){
     font-size: 1vw;
     padding: 0 1vw;
-    height: 2.5vw;
+    height: 2.8vw;
   }
   &:focus{
     outline: none;
@@ -83,6 +83,12 @@
     }
   }
   svg{
+    margin-left: 20px;
+    @include breakpoint(sm){
+      margin-left: 1vw;
+    }
+  }
+  i{
     margin-left: 20px;
     @include breakpoint(sm){
       margin-left: 1vw;

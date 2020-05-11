@@ -27,8 +27,6 @@ html(lang="vi")
                             .flightStepMobile 01. Select Flight
                         .flightHeader__right
                             button.btn.btn-orange-1(type='button') EDIT SEARCH
-
-
                 .flightSelect
                     .container
                         .flightSelect__item
@@ -46,12 +44,81 @@ html(lang="vi")
                                 p.text12.colorBlack55.mr15 Total price for all passengers
                                 p
                                     span.text16.colorOrange.medium USD 600.88
-                                    button.viewMore.d-block(type='button')
+                                    button.viewMore.d-block.btn-yourBooking(type='button')
                                         span Price details
                                 .yourBooking
-                                    p.yourBooking__title Your booking
-                                    .yourBooking__item
+                                    .yourBooking__header
+                                        p.yourBooking__title Your booking
+                                        button.yourBooking__close(type='button')
+                                            svg.svg1(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                                    .yourBooking__body
+                                        .yourBooking__item
+                                            .textIcon.mb15
+                                                svg.svg1(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M6 19L8 19L13 11L18.5 11C18.8978 11 19.2794 10.842 19.5607 10.5607C19.842 10.2794 20 9.89782 20 9.5C20 9.10218 19.842 8.72064 19.5607 8.43934C19.2794 8.15804 18.8978 8 18.5 8L13 8L8 -5.24537e-07L6 -6.11959e-07L8.5 8L3 8L1.5 6L-2.62268e-07 6L1 9.5L-5.68248e-07 13L1.5 13L3 11L8.5 11L6 19Z', fill='black', fill-opacity='0.55')
+                                                span Outbound flight
+                                            .tripBox
+                                                .tripBox__item
+                                                    p.text18.colorBlack85.medium
+                                                        | 15:35
+                                                        span.colorBlack55 &nbsp;HAN
+                                                    p.text12.colorBlack85.medium Hanoi, Vietnam
+                                                .tripBox__stop
+                                                    .tripBox__time 2h05m
+                                                    p
+                                                        span.text12.colorBlack55.d-block 1 Stop(s)
+                                                        span.text12.colorBlack85.medium (SGN)
+                                                .tripBox__item
+                                                    p.text18.colorBlack85.medium
+                                                        | 17: 40
+                                                        span.colorBlack55 &nbsp;BKK
+                                                    p.text12.colorBlack85.medium Bangkok, Thailand
 
+                                            p.text14.colorBlack85 Economy Saver
+                                        .yourBooking__item
+                                            .textIcon.mb15
+                                                svg.svg1(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M14 -6.11959e-07L12 -5.24537e-07L7 8L1.5 8C1.10217 8 0.720644 8.15804 0.439339 8.43934C0.158035 8.72064 -4.32648e-07 9.10218 -4.15258e-07 9.5C-3.97869e-07 9.89782 0.158035 10.2794 0.43934 10.5607C0.720644 10.842 1.10217 11 1.5 11L7 11L12 19L14 19L11.5 11L17 11L18.5 13L20 13L19 9.5L20 6L18.5 6L17 8L11.5 8L14 -6.11959e-07Z', fill='black', fill-opacity='0.55')
+                                                span Outbound flight
+                                            .tripBox
+                                                .tripBox__item
+                                                    p.text18.colorBlack85.medium
+                                                        | 17: 40
+                                                        span.colorBlack55 &nbsp;BKK
+                                                    p.text12.colorBlack85.medium Bangkok, Thailand
+
+                                                .tripBox__stop
+                                                    .tripBox__time 2h05m
+                                                    p
+                                                        span.text12.colorBlack55.d-block 2 Stop(s)
+                                                        span.text12.colorBlack85.medium (SGN, DAN)
+                                                .tripBox__item
+                                                    p.text18.colorBlack85.medium
+                                                        | 15:35
+                                                        span.colorBlack55 &nbsp;HAN
+                                                    p.text12.colorBlack85.medium Hanoi, Vietnam
+
+                                            p.text14.colorBlack85 Economy Saver
+                                        .yourBooking__item
+                                            .yourBooking__traveler
+                                                .textIcon
+                                                    svg(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.55')
+                                                    span Traveler/s
+                                                p.text14.colorBlack55 2 adult
+                                        .yourBooking__item
+                                            .yourBooking__total
+                                                .d-flex
+                                                    .d-block
+                                                        p.text20.medium.colorBlack85 TOTAL
+                                                        p.text14.colorBlack55 2 adult
+                                                    .d-block.text-right
+                                                        p.text20.medium.colorOrange USD 600.88
+                                                        p.text14.colorBlack55 USD 300.44
+                                                p.text12.colorBlack55.mt15 * Final price for all travelers (included all taxes, fees & charges)
+                                    .yourBooking__btn
+                                        a.btn.btn-orange-1(href='#') CONTINUE
                 .flightList__main
                     .flightList__item
 
@@ -78,6 +145,15 @@ html(lang="vi")
             };
             if (screen.width < 768) {
                 $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+        script.
+            if (screen.width >= 768) {
+                $('.btn-yourBooking').click(function () {
+                    $('.yourBooking').slideToggle(400);
+                });
+                $('.yourBooking__close').click(function () {
+                    $('.yourBooking').slideUp(400);
+                });
             };
 
 

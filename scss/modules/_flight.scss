@@ -229,9 +229,6 @@
 .flightSelect{
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   background-color: #fff;
-  @include breakpoint(xs){
-    display: none;
-  }
   &__item{
     width: 33.333%;
     padding: 1vw 0;
@@ -255,9 +252,159 @@
   &__price{
     display: flex;
     justify-content: flex-end;
+    position: relative;
   }
   .container{
     display: flex;
     align-items: center;
+  }
+}
+.textIcon{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: $black55;
+  @include breakpoint(sm){
+    font-size: 1vw;
+  }
+  span{
+    margin-left: 15px;
+    @include breakpoint(sm){
+      margin-left: 1vw;
+    }
+  }
+}
+.tripBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  @include breakpoint(sm){
+    margin-bottom: 1vw;
+  }
+  &__time{
+    font-size: 12px;
+    height: 24px;
+    padding: 0 15px;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: $black55;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-bottom: 5px;
+    @include breakpoint(sm){
+      font-size: .9vw;
+      height: 1.7vw;
+      padding: 0 1vw;
+      margin-bottom: .5vw;
+    }
+  }
+  &__item{
+    width: 35%;
+  }
+  &__stop{
+    text-align: center;
+    padding: 0 10px;
+    width: 30%;
+    @include breakpoint(sm){
+      padding: 0 .8vw;
+    }
+  }
+}
+.yourBooking{
+  background-color: #fff;
+  @include breakpoint(xs){
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    transition: all .3s ease-in-out;
+    transform: translateY(100%);
+    visibility: hidden;
+  }
+  @include breakpoint(sm){
+    position: absolute;
+    top: calc(100% + 1vw);
+    left: 0;
+    z-index: 10;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-bottom: 4px solid $purple;
+    width: 27vw;
+    display: none;
+  }
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(xs){
+      height: 60px;
+      padding: 0 24px;
+    }
+    @include breakpoint(sm){
+      padding: 1.5vw 1.5vw 0;
+    }
+  }
+  &__close{
+    svg{
+      display: block;
+    }
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: 500;
+    color: $purple;
+    @include breakpoint(sm){
+      font-size: 1.3vw;
+    }
+  }
+  &__body{
+    @include breakpoint(xs){
+      height: calc(100% - 140px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 24px;
+    }
+    @include breakpoint(sm){
+      padding: 0 1.5vw;
+    }
+  }
+  &__item{
+    padding: 15px 0;
+    border-bottom: 1px solid $black15;
+    @include breakpoint(sm){
+      padding: 1vw 0;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  &__traveler{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__total{
+    .d-flex{
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__btn{
+    @include breakpoint(xs){
+      display: flex;
+      align-items: center;
+      height: 80px;
+      padding: 0 24px;
+    }
+    @include breakpoint(sm){
+      padding: 1.5vw;
+    }
+    .btn{
+      width: 100%;
+    }
   }
 }

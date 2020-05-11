@@ -71,6 +71,12 @@ h5{
     margin-left: .5vw;
   }
 }
+.mr5{
+  margin-right: 5px;
+  @include breakpoint(sm){
+    margin-right: .5vw;
+  }
+}
 .mr15{
   margin-right: 15px;
   @include breakpoint(sm){
@@ -178,9 +184,15 @@ h5{
   }
 }
 .text18{
-  font-size: 16px;
+  font-size: 18px;
   @include breakpoint(sm){
     font-size: 1.2vw;
+  }
+}
+.text20{
+  font-size: 20px;
+  @include breakpoint(sm){
+    font-size: 1.3vw;
   }
 }
 
