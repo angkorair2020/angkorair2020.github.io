@@ -505,9 +505,15 @@ html(lang="vi")
             $('.camNavbar__close, .camNavbar__backdrop').click(function () {
                 $('.camNavbar__main').removeClass('open');
             });
-            $('.camNavbar__link').click(function () {
-                $(this).next('.camNavbar__sub').slideToggle(200);
-            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
         script.
             // searchBox
             $(".inputSvg .form-control").click(function () {

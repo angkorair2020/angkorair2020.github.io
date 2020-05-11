@@ -142,6 +142,10 @@
                 <p><span class="text16 colorOrange medium">USD 600.88</span>
                   <button type="button" class="viewMore d-block"><span>Price details</span></button>
                 </p>
+                <div class="yourBooking">
+                  <p class="yourBooking__title">Your booking</p>
+                  <div class="yourBooking__item"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -281,9 +285,15 @@
       $('.camNavbar__close, .camNavbar__backdrop').click(function () {
           $('.camNavbar__main').removeClass('open');
       });
-      $('.camNavbar__link').click(function () {
-          $(this).next('.camNavbar__sub').slideToggle(200);
-      });
+      if (screen.width < 768) {
+          $('.camNavbar__link').click(function () {
+              $(this).next('.camNavbar__sub').slideToggle(200);
+              $(this).parent('li').toggleClass('active');
+          });
+      };
+      if (screen.width < 768) {
+          $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+      };
     </script>
   </body>
 </html>
