@@ -1,0 +1,306 @@
+.flTable{
+  &__group{
+    margin-bottom: .7vw;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+  }
+  &__header{
+    background-color: $purple;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: .7vw;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
+  &__left{
+    width: 65%;
+  }
+  &__col{
+    display: flex;
+    align-items: center;
+  }
+  &__right{
+    width: 35%;
+    display: flex;
+    align-items: center;
+  }
+  &__row{
+    display: flex;
+    background-color: #fff;
+  }
+  &__cell{
+    padding: 1vw;
+    &.cell-1{
+      width: 20%;
+    }
+    &.cell-2{
+      width: 30%;
+    }
+    &.cell-3{
+      width: 20%;
+    }
+    &.cell-4{
+      width: 30%;
+    }
+    &.cell-5{
+      width: 50%;
+    }
+    &.cell-6{
+      width: 50%;
+    }
+  }
+  &__info{
+    padding: 1vw 0;
+  }
+  &__item{
+    display: flex;
+    position: relative;
+  }
+  &__airline{
+    img{
+      width: 2vw;
+    }
+    .d-flex{
+      align-items: center;
+      margin-bottom: .5vw;
+    }
+    p{
+      display: flex;
+      align-items: center;
+      margin-left: .8vw;
+      flex: 1;
+      i{
+        color: rgba(0, 0, 0, 0.15);
+        font-size: .5vw;
+        margin: 0 1vw;
+      }
+    }
+    .viewMore{
+      margin-left: 2.8vw;
+    }
+  }
+  &__ticket{
+    text-align: center;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding: 1vw;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .2s;
+    &:before{
+      content: '';
+      border-width: .4vw;
+      border-style: solid;
+      border-color: transparent transparent #fff transparent;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .d-block{
+      svg{
+        margin-top: .5vw;
+        transition: all .4s;
+      }
+    }
+    &.active{
+      &.ticket-economy{
+        background-color: #502678;
+      }
+      &.ticket-business{
+        background-color: #1D0C43;
+      }
+      p{
+        color: #fff;
+      }
+      svg{
+        path{
+          fill:#fff;
+        }
+      }
+      .d-block{
+        svg{
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &__label{
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    svg{
+      display: block;
+    }
+  }
+  &__time{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -.5vw;
+    left: 0;
+    background-color: #fff;
+    padding: 0 1vw;
+
+  }
+  &__detail{
+    display: none;
+    .flTable{
+      &__item{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        padding: 1vw 0;
+        &:last-child{
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  &__economy{
+    background-color: #502678;
+  }
+  &__business{
+    background-color: #1D0C43;
+  }
+  &__fare{
+    display: none;
+  }
+}
+.stopBox{
+  margin-top: .3vw;
+  &__line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &:before{
+      content: '';
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+      width: 92%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__plane{
+    position: relative;
+    svg{
+      display: block;
+    }
+  }
+  &__dot{
+    font-size: .6vw;
+    position: relative;
+  }
+  &__text{
+    text-align: center;
+    margin-top: .3vw;
+    span{
+      border-radius: 4px;
+      padding: .1vw .5vw;
+      color: #fff;
+    }
+  }
+}
+.fareCondition{
+  background-color: #FBF5FF;
+  padding: 1vw;
+  &__title{
+    padding: .5vw 1vw;
+    display: flex;
+    font-size: 1vw;
+    color: $purple;
+    font-weight: 500;
+    svg{
+      display: block;
+      @include breakpoint(lg){
+        width: 1.5vw;
+        height: 1.5vw;
+      }
+    }
+    span{
+      padding-left: 1vw;
+      @include breakpoint(lg){
+        width: calc(100% - 1.5vw);
+      }
+    }
+  }
+  &__th{
+    color: $purple;
+    font-size: 1.1vw;
+  }
+  &__ticket{
+    color: #fff;
+    background-color: $purple;
+    position: relative;
+    text-align: center;
+    border-radius: 4px 4px 0 0;
+    &.ticket-1{
+      background-color: #C087DB;
+    }
+    &.ticket-2{
+      background-color: #9860B9;
+    }
+    &.ticket-3{
+      background-color: #66338C;
+    }
+    span{
+      position: absolute;
+      top: .5vw;
+      left: .5vw;
+      svg{
+        display: block;
+      }
+    }
+  }
+  &__text{
+    background-color: #fff;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+    padding: .5vw 1vw;
+    font-size: 1vw;
+    color: $black85;
+  }
+  &__select{
+    background-color: #fff;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 4px 4px;
+    padding:1.5vw 1vw;
+    text-align: center;
+  }
+  &__price{
+    margin-bottom: 1vw;
+  }
+  &__btn{
+    .btn{
+      width: 100%;
+    }
+  }
+  &__note{
+    padding: .5vw 1vw;
+  }
+  table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: .5vw 0;
+    th{
+      vertical-align: middle;
+      p{
+        font-weight: 500;
+        padding: 1vw;
+      }
+    }
+    td{
+      vertical-align: middle;
+    }
+  }
+}

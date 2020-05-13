@@ -336,6 +336,11 @@
     width: 27vw;
     display: none;
   }
+  &.open{
+    @include breakpoint(sm){
+      display: block;
+    }
+  }
   &__header{
     display: flex;
     justify-content: space-between;

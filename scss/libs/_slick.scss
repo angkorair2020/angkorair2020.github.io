@@ -179,7 +179,12 @@ $slick-opacity-not-active: 0.25 !default;
 }
 .slick-disabled{
   opacity: .5;
-  cursor: not-allowed;
+  cursor: not-allowed!important;
+  &:hover{
+    &:before{
+      color: rgba(0,0,0,.35);
+    }
+  }
 }
 .slick-arrow{
   &:focus{
