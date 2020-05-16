@@ -1,5 +1,8 @@
 .flightList{
   &__main{
+    @include breakpoint(xs){
+      padding: 30px 0;
+    }
     @include breakpoint(sm){
       padding: 3vw 0;
     }
@@ -13,6 +16,21 @@
     text-align: right;
     .btn{
       min-width: 10vw;
+    }
+  }
+  &__desktop{
+    @include breakpoint(xs){
+      display: none;
+    }
+  }
+  &__mobile{
+    @include breakpoint(sm){
+      display: none;
+    }
+    .flightList__item{
+      > h2{
+        font-size: 30px;
+      }
     }
   }
 }
@@ -91,37 +109,66 @@
   }
 }
 .lineInfo{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1vw;
-  &__left{
+  @include breakpoint(sm){
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1vw;
+  }
+  &__left{
+    @include breakpoint(sm){
+      display: flex;
+      align-items: center;
+    }
   }
   &__trip{
     display: flex;
     align-items: center;
-    margin-right: 1vw;
+    @include breakpoint(xs){
+      margin-bottom: 10px;
+    }
+    @include breakpoint(sm){
+      margin-right: 1vw;
+    }
     svg{
-      margin: 0 1vw;
+      margin: 0 15px;
+      @include breakpoint(sm){
+        margin: 0 1vw;
+      }
+    }
+    p{
+      @include breakpoint(xs){
+        font-weight: 500;
+      }
     }
   }
   &__date{
     display: flex;
     align-items: center;
+    @include breakpoint(xs){
+      margin-bottom: 10px;
+    }
     &:before{
       content: '\f111';
       font-weight: 900;
       font-family: "Font Awesome 5 Free";
-      font-size: .5vw;
+      font-size: 8px;
       color: rgba(0, 0, 0, 0.15);
-      margin-right: 1vw;
+      margin-right: 15px;
+      @include breakpoint(sm){
+        font-size: .5vw;
+        margin-right: 1vw;
+      }
     }
   }
   &__fare{
     display: flex;
     align-items: center;
+    span{
+      @include breakpoint(xs){
+        margin-left: 8px;
+      }
+    }
   }
 }
 .flightResult{
@@ -153,6 +200,96 @@
     }
     h2{
       text-align: center;
+    }
+  }
+}
+.sortFilterMobile{
+  display: flex;
+  margin: 15px -4px;
+  .dropdown{
+    width: 50%;
+    padding: 0 4px;
+  }
+  .dropdown-menu{
+    min-width: calc(100% - 8px);
+  }
+  &__filter{
+    .dropdown-toggle{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:after{
+        display: none;
+      }
+    }
+  }
+}
+.flDateMobile{
+  background: #FFFFFF;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px 4px 0px 0px;
+  padding: 0 15px;
+  margin-bottom: 10px;
+  &__slide{
+    padding: 10px 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    .d-item{
+      text-align: center;
+      &.active{
+        span{
+          &:last-child{
+            background-color: $orange;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+          }
+        }
+      }
+      span{
+        margin: 0 5px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .slick-arrow{
+      border: none;
+    }
+  }
+  &__btn{
+    font-size: 12px;
+    color: $black55;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    &.rotate{
+      svg{
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__main{
+    display: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    .d-item{
+      width: 33.333%;
+      text-align: center;
+      padding: 5px 10px;
+      &.active{
+        background-color: $orange;
+        p{
+          color: #fff;
+          span{
+            color: #fff;
+          }
+        }
+      }
+      span{
+        margin: 0 3px;
+      }
     }
   }
 }

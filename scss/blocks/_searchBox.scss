@@ -160,31 +160,18 @@
           right: 39px;
         }
       }
+      .t-datepicker{
+        cursor: not-allowed!important;
+        .t-dates{
+          pointer-events: none;
+          opacity: .5;
+        }
+      }
     }
     .form-group{
       position: relative;
       @include breakpoint(sm){
         padding: 0 .7vw;
-      }
-      &.w25{
-        @include breakpoint(sm){
-          width: calc((100% - 2.2vw)/4);
-        }
-      }
-      &.w28{
-        @include breakpoint(sm){
-          width: calc(100% - ((100% - 2.2vw)/4)*3);
-        }
-      }
-      &.w19{
-        @include breakpoint(sm){
-          width: 19%;
-        }
-      }
-      &.w38{
-        @include breakpoint(sm){
-          width: 38%;
-        }
       }
       > label{
         font-weight: 400;
@@ -213,6 +200,31 @@
         width: 2.2vw;
         height: 2.2vw;
         margin-bottom: 1.4vw;
+      }
+    }
+    .w25{
+      @include breakpoint(sm){
+        width: calc((100% - 2.2vw)/4) !important;
+      }
+    }
+    .w28{
+      @include breakpoint(sm){
+        width: calc(100% - ((100% - 2.2vw)/4)*3) !important;
+      }
+    }
+    .w19{
+      @include breakpoint(sm){
+        width: 19% !important;
+      }
+    }
+    .w38{
+      @include breakpoint(sm){
+        width: 38% !important;
+      }
+    }
+    .w100{
+      @include breakpoint(sm){
+        width: 100% !important;
       }
     }
   }
