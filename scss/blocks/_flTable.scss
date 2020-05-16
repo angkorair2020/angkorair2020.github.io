@@ -15,14 +15,14 @@
     z-index: 3;
   }
   &__left{
-    width: 65%;
+    width: 68%;
   }
   &__col{
     display: flex;
     align-items: center;
   }
   &__right{
-    width: 35%;
+    width: 32%;
     display: flex;
     align-items: center;
   }
@@ -43,6 +43,7 @@
     }
     &.cell-4{
       width: 30%;
+      padding-left: 0;
     }
     &.cell-5{
       width: 50%;
