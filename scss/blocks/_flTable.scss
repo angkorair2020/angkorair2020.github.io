@@ -60,25 +60,40 @@
   }
   &__airline{
     img{
-      width: 2vw;
+      width: 26px;
+      @include breakpoint(sm){
+        width: 2vw;
+      }
     }
     .d-flex{
       align-items: center;
-      margin-bottom: .5vw;
+      margin-bottom: 5px;
+      @include breakpoint(sm){
+        margin-bottom: .5vw;
+      }
     }
     p{
       display: flex;
       align-items: center;
-      margin-left: .8vw;
+      margin-left: 15px;
       flex: 1;
+      @include breakpoint(sm){
+        margin-left: .8vw;
+      }
       i{
         color: rgba(0, 0, 0, 0.15);
-        font-size: .5vw;
-        margin: 0 1vw;
+        font-size: 6px;
+        margin: 0 10px;
+        @include breakpoint(sm){
+          font-size: .5vw;
+          margin: 0 1vw;
+        }
       }
     }
     .viewMore{
-      margin-left: 2.8vw;
+      @include breakpoint(sm){
+        margin-left: 2.8vw;
+      }
     }
   }
   &__ticket{
@@ -140,14 +155,23 @@
     }
   }
   &__time{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: -.5vw;
-    left: 0;
     background-color: #fff;
-    padding: 0 1vw;
-
+    @include breakpoint(xs){
+      display: inline-block;
+      transform: translateY(5px);
+      padding-right: 15px;
+    }
+    @include breakpoint(sm){
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: -.5vw;
+      left: 0;
+      padding: 0 1vw;
+    }
+    i{
+      color: #8c8c8c;
+    }
   }
   &__detail{
     display: none;
@@ -170,14 +194,31 @@
   &__fare{
     display: none;
   }
+  &__trip{
+    @include breakpoint(xs){
+      width: 33.333%;
+    }
+  }
 }
 .stopBox{
-  margin-top: .3vw;
+  @include breakpoint(xs){
+    width: 33.333%;
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+  @include breakpoint(sm){
+    margin-top: .3vw;
+  }
   &__line{
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    @include breakpoint(xs){
+      min-height: 12px;
+      width: 100%;
+
+    }
     &:before{
       content: '';
       border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
@@ -192,31 +233,126 @@
     position: relative;
     svg{
       display: block;
+      path{
+        fill: #8c8c8c;
+        fill-opacity: 1;
+      }
     }
   }
   &__dot{
-    font-size: .6vw;
     position: relative;
+    font-size: 8px;
+    @include breakpoint(sm){
+      font-size: .6vw;
+    }
   }
   &__text{
     text-align: center;
-    margin-top: .3vw;
+    margin-top: 5px;
+    @include breakpoint(sm){
+      margin-top: .3vw;
+    }
     span{
       border-radius: 4px;
-      padding: .1vw .5vw;
+      padding: 2px 5px;
       color: #fff;
+      @include breakpoint(sm){
+        padding: .1vw .5vw;
+      }
     }
   }
 }
 .fareCondition{
-  background-color: #FBF5FF;
-  padding: 1vw;
-  &__title{
-    padding: .5vw 1vw;
+  @include breakpoint(xs){
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: #fff;
+    transform: translateY(100%);
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+    &.open{
+      transform: none;
+      visibility: visible;
+    }
+  }
+  @include breakpoint(sm){
+    padding: 1vw;
+    background-color: #FBF5FF;
+  }
+  &__header{
     display: flex;
-    font-size: 1vw;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 15px;
+    h4{
+      font-size: 20px;
+    }
+  }
+  &__close{
+    padding: 15px 0;
+    svg{
+      display: block;
+    }
+  }
+  &__body{
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 15px;
+  }
+  &__group{
+    margin-bottom: 15px;
+  }
+  &__heading{
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    &.heading-1{
+      background-color: #C087DB;
+    }
+    &.heading-2{
+      background-color: #9860B9;
+    }
+    &.heading-3{
+      background-color: #66338C;
+    }
+    &.heading-4{
+      background-color: #502678;
+    }
+    &.heading-5{
+      background-color: #3C1B65;
+    }
+    &.heading-6{
+      background-color: #1D0C43;
+    }
+  }
+  &__row{
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  &__title{
+    padding:15px;
+    display: flex;
+    font-size: 14px;
     color: $purple;
     font-weight: 500;
+    @include breakpoint(xs){
+      width: 55%;
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    @include breakpoint(sm){
+      padding: .5vw 1vw;
+      font-size: 1vw;
+    }
     svg{
       display: block;
       @include breakpoint(lg){
@@ -225,7 +361,11 @@
       }
     }
     span{
-      padding-left: 1vw;
+      padding-left: 15px;
+      flex: 1;
+      @include breakpoint(sm){
+        padding-left: 1vw;
+      }
       @include breakpoint(lg){
         width: calc(100% - 1.5vw);
       }
@@ -261,12 +401,20 @@
   }
   &__text{
     background-color: #fff;
-    border-left: 1px solid rgba(0, 0, 0, 0.15);
-    border-right: 1px solid rgba(0, 0, 0, 0.15);
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
-    padding: .5vw 1vw;
-    font-size: 1vw;
     color: $black85;
+    @include breakpoint(xs){
+      width: 45%;
+      font-size: 14px;
+      font-weight: 500;
+      padding:15px;
+    }
+    @include breakpoint(sm){
+      border-left: 1px solid rgba(0, 0, 0, 0.15);
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+      padding: .5vw 1vw;
+      font-size: 1vw;
+    }
   }
   &__select{
     background-color: #fff;
@@ -286,7 +434,10 @@
     }
   }
   &__note{
-    padding: .5vw 1vw;
+    padding: 5px 15px;
+    @include breakpoint(sm){
+      padding: .5vw 1vw;
+    }
   }
   table{
     width: 100%;

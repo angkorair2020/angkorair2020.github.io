@@ -8,14 +8,34 @@
     }
   }
   &__item{
+    @include breakpoint(xs){
+      margin-bottom: 30px;
+    }
     @include breakpoint(sm){
       margin-bottom: 3vw;
     }
   }
   &__btn{
-    text-align: right;
+    @include breakpoint(xs){
+      background: #FFFFFF;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+    }
+    @include breakpoint(sm){
+      text-align: right;
+    }
     .btn{
-      min-width: 10vw;
+      @include breakpoint(sm){
+        min-width: 10vw;
+      }
     }
   }
   &__desktop{
@@ -78,37 +98,11 @@
     }
   }
 }
-.sortBy{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-bottom: 1vw;
-  ul{
-    display: flex;
-    align-items: center;
-    margin-left: 1.5vw;
-    li{
-      +li{
-        padding-left: 1vw;
-      }
-      &.active{
-        .btn{
-          background-color: $purple;
-          color: #fff;
-        }
-      }
-      .btn{
-        font-weight: 400;
-        &:hover{
-          background-color: $purple;
-          color: #fff;
-          opacity: 1;
-        }
-      }
-    }
-  }
-}
+
 .lineInfo{
+  @include breakpoint(xs){
+    margin-bottom: 15px;
+  }
   @include breakpoint(sm){
     display: flex;
     align-items: center;
@@ -205,7 +199,7 @@
 }
 .sortFilterMobile{
   display: flex;
-  margin: 15px -4px;
+  margin: 0 -4px 15px;
   .dropdown{
     width: 50%;
     padding: 0 4px;
@@ -290,6 +284,164 @@
       span{
         margin: 0 3px;
       }
+    }
+  }
+}
+.flTableMobile{
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  &__group{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+  }
+  &__main{
+    padding: 10px;
+  }
+  &__item{
+    padding: 15px 0;
+  }
+  &__time{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  &__detail{
+    display: none;
+  }
+  &__price{
+    .btnPrice{
+      background:rgba(242, 216, 248, 0.15);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      svg{
+        transition: all .4s;
+      }
+      &.rotate{
+        svg{
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &__ticket{
+    padding: 15px 10px 0;
+    display: none;
+    &__item{
+      margin-bottom: 10px;
+    }
+    &__header{
+      position: relative;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      color: #fff;
+      font-weight: 500;
+      &.header-1{
+        background-color: #C087DB;
+      }
+      &.header-2{
+        background-color: #9860B9;
+      }
+      &.header-3{
+        background-color: #66338C;
+      }
+      &.header-4{
+        background-color: #502678;
+      }
+      &.header-5{
+        background-color: #3C1B65;
+      }
+      svg{
+        position: absolute;
+        top: 5px;
+        left:5px;
+      }
+    }
+    &__body{
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-top: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 10px;
+      .btn{
+        min-width: 96px;
+      }
+    }
+  }
+  &__fare{
+    padding: 15px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.15);
+    margin: 15px -10px 0;
+    span{
+      margin-left: 10px;
+    }
+  }
+  &__selected{
+    background-color: #502678;
+    text-align: center;
+    padding: 15px;
+    .btn{
+      min-width: 165px;
+    }
+  }
+}
+.sortBy{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1vw;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  margin-right: 1vw;
+  ul{
+    display: flex;
+    align-items: center;
+    margin-left: 1.5vw;
+    li{
+      +li{
+        padding-left: 1vw;
+      }
+      &.active{
+        .btn{
+          background-color: $purple;
+          color: #fff;
+        }
+      }
+      .btn{
+        font-weight: 400;
+        &:hover{
+          background-color: $purple;
+          color: #fff;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.sortFilter{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1vw;
+  .dropdown-toggle{
+    color: $purple;
+    font-size: 1vw;
+    svg{
+      margin-right: 0;
+      margin-left: .5vw;
+      path{
+        fill: $purple;
+        fill-opacity: 1;
+      }
+    }
+    &:after{
+      display: none;
     }
   }
 }

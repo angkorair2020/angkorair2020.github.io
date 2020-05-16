@@ -16,6 +16,7 @@
     font-size: 14px;
     color: #000;
     margin-left: 8px;
+    flex: 1;
     @include breakpoint(sm){
       font-size: 1vw;
       margin-left: .8vw;
