@@ -156,7 +156,7 @@
     display: none;
   }
   &__item{
-    width: 25%;
+    width: 30%;
     position: relative;
     &:before{
       content: '';
@@ -167,14 +167,28 @@
       top: .6vw;
       left: .1vw;
     }
-    &:nth-child(2),
-    &:nth-child(3),{
+    &.step1{
+      width: 20%;
+      &.visited{
+        &:before{
+          width: 12vw;
+        }
+      }
+    }
+    &.step2,
+    &.step3,{
       text-align: center;
+      &.visited{
+        &:before{
+          width: 16vw;
+        }
+      }
       .flightStep__numb{
         margin: auto;
       }
     }
-    &:nth-child(4){
+    &.step4{
+      width: 20%;
       display: flex;
       justify-content: flex-end;
       flex-wrap: wrap;
@@ -186,6 +200,19 @@
       }
     }
     &.active{
+      .flightStep__numb{
+        background-color: $orange;
+        color: #fff;
+      }
+      .flightStep__text{
+        color: $orange;
+      }
+    }
+    &.visited{
+      &:before{
+        background-color: $orange;
+        z-index: 1;
+      }
       .flightStep__numb{
         background-color: $orange;
         color: #fff;
