@@ -9,3 +9,17 @@
     font-size: 1vw;
   }
 }
+.textNote{
+  display: flex;
+  align-items: center;
+  &__text{
+    font-size: 14px;
+    color: #81BE33;
+    flex: 1;
+    padding-left: 15px;
+    @include breakpoint(sm){
+      font-size: 1vw;
+      padding-left: 1vw;
+    }
+  }
+}

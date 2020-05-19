@@ -14,7 +14,7 @@
     margin-bottom: 0;
     padding-left: 30px;
     font-size: 14px;
-    color: #595959;
+    color: $black85;
     @include breakpoint(sm){
       font-size: 1vw;
       padding-left: 2vw;
@@ -23,7 +23,7 @@
       content: '';
       -webkit-appearance: none;
       background-color: transparent;
-      border: 1px solid #d9d9d9;
+      border: 1px solid $black55;
       padding: 8px;
       display: inline-block;
       position: absolute;
@@ -47,7 +47,7 @@
     left: 6px;
     width: 6px;
     height: 12px;
-    border: solid #0079bf;
+    border: solid #fff;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
     @include breakpoint(sm){
@@ -56,5 +56,9 @@
       top: 1px;
       left: .5vw;
     }
+  }
+  input:checked + label:before {
+    background-color: $orange;
+    border-color: $orange;
   }
 }

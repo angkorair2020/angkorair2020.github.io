@@ -270,11 +270,23 @@
   &__text{
     display: flex;
     align-items: center;
-    font-size:1vw;
-    color: $black75;
+    > span{
+      font-size:1vw;
+      color: $black75;
+    }
     svg{
       display: block;
       margin-right: 1vw;
+    }
+    .d-flex{
+      align-items: center;
+    }
+    .d-icon{
+      margin: 0 1vw;
+      i{
+        color: $black55;
+        font-size: 1.3vw;
+      }
     }
   }
   &__price{
@@ -457,6 +469,39 @@
     }
     .btn{
       width: 100%;
+    }
+  }
+}
+.flightInfo{
+  @include breakpoint(sm){
+    padding: 2vw 0;
+  }
+  &__right{
+    @include breakpoint(sm){
+      position: relative;
+    }
+  }
+  .container{
+    @include breakpoint(sm){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .d-flex{
+    align-items: center;
+    svg{
+      @include breakpoint(sm){
+        margin: 0 1vw;
+      }
+    }
+  }
+  .btn-yourBooking{
+    span{
+      margin-right: 10px;
+      @include breakpoint(sm){
+        margin-right: .8vw;
+      }
     }
   }
 }
