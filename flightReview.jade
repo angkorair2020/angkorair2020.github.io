@@ -1,0 +1,163 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.flightReview
+                .flightHeader
+                    .container
+                        .flightHeader__left
+                            .flightStep
+                                .flightStep__item.step1.visited
+                                    .flightStep__numb 1
+                                    .flightStep__text Select Flight
+                                .flightStep__item.step2.active
+                                    .flightStep__numb 2
+                                    .flightStep__text Passenger
+                                .flightStep__item.step3
+                                    .flightStep__numb 3
+                                    .flightStep__text Review
+                                .flightStep__item.step4
+                                    .flightStep__numb 4
+                                    .flightStep__text Payment
+                            .flightStepMobile 02. Passenger
+                        .flightHeader__right
+                            button.btn.btn-orange-1(type='button' data-toggle="modal" data-target="#searchModal") EDIT SEARCH
+
+                .flightSelect
+                    .container
+                        .flightSelect__item
+                            .flightSelect__text
+                                svg.svg1(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M6 19L8 19L13 11L18.5 11C18.8978 11 19.2794 10.842 19.5607 10.5607C19.842 10.2794 20 9.89782 20 9.5C20 9.10218 19.842 8.72064 19.5607 8.43934C19.2794 8.15804 18.8978 8 18.5 8L13 8L8 -5.24537e-07L6 -6.11959e-07L8.5 8L3 8L1.5 6L-2.62268e-07 6L1 9.5L-5.68248e-07 13L1.5 13L3 11L8.5 11L6 19Z', fill='black', fill-opacity='0.55')
+                                .d-flex
+                                    .d-block
+                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                        p.text14.colorBlack85 15:35 HAN
+                                    .d-icon
+                                        i.fas.fa-long-arrow-alt-right
+                                    .d-block
+                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                        p.text14.colorBlack85 17:40 HKT
+                        .flightSelect__item
+                            .flightSelect__text
+                                svg.svg1(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M14 -6.11959e-07L12 -5.24537e-07L7 8L1.5 8C1.10217 8 0.720644 8.15804 0.439339 8.43934C0.158035 8.72064 -4.32648e-07 9.10218 -4.15258e-07 9.5C-3.97869e-07 9.89782 0.158035 10.2794 0.43934 10.5607C0.720644 10.842 1.10217 11 1.5 11L7 11L12 19L14 19L11.5 11L17 11L18.5 13L20 13L19 9.5L20 6L18.5 6L17 8L11.5 8L14 -6.11959e-07Z', fill='black', fill-opacity='0.55')
+                                .d-flex
+                                    .d-block
+                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                        p.text14.colorBlack85 15:35 HAN
+                                    .d-icon
+                                        i.fas.fa-long-arrow-alt-right
+                                    .d-block
+                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                        p.text14.colorBlack85 17:40 HKT
+                        .flightSelect__item
+
+                .flightReview__main
+                    .container
+                        .formBox
+                            .formBox__header
+                                svg.svg1(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M10 0C11.3132 0 12.6136 0.258658 13.8268 0.761205C15.0401 1.26375 16.1425 2.00035 17.0711 2.92893C17.9997 3.85752 18.7362 4.95991 19.2388 6.17317C19.7413 7.38642 20 8.68678 20 10C20 12.6522 18.9464 15.1957 17.0711 17.0711C15.1957 18.9464 12.6522 20 10 20C8.68678 20 7.38642 19.7413 6.17317 19.2388C4.95991 18.7362 3.85752 17.9997 2.92893 17.0711C1.05357 15.1957 0 12.6522 0 10C0 7.34784 1.05357 4.8043 2.92893 2.92893C4.8043 1.05357 7.34784 0 10 0ZM10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2ZM9 15V14H7V12H11V11H8C7.73478 11 7.48043 10.8946 7.29289 10.7071C7.10536 10.5196 7 10.2652 7 10V7C7 6.73478 7.10536 6.48043 7.29289 6.29289C7.48043 6.10536 7.73478 6 8 6H9V5H11V6H13V8H9V9H12C12.2652 9 12.5196 9.10536 12.7071 9.29289C12.8946 9.48043 13 9.73478 13 10V13C13 13.2652 12.8946 13.5196 12.7071 13.7071C12.5196 13.8946 12.2652 14 12 14H11V15H9Z', fill='#F79320')
+
+                                p.text14.colorOrange.medium Price
+                            .formBox__body
+                                .formBox__item
+                                    .formBox__price
+                                        .formBox__price__left
+                                            .formBox__price__total
+                                                .d-block
+                                                    p.text16.medium.colorBlack85 TOTAL
+                                                    p.text12.colorBlack55 The price is total price for all travelers (including taxes, fees & charges)
+                                                .d-block
+                                                    p.text16.colorOrange.medium USD 666.88
+                                            .formBox__price__cost
+                                                .d-flex
+                                                    p.text14.colorBlack85 Fares
+                                                    p.text14.colorBlack85 USD 664.66
+
+                                                .d-flex
+                                                    p.text14.colorBlack85 Taxes, Fees and Charges
+                                                    p.text14.colorBlack85 USD 2.22
+                                        .formBox__price__right
+                                            .formBox__price__detail
+                                                .d-flex
+                                                    p.text16.medium.colorBlack85 PRICE DETAILS
+                                                    p.text16.medium.colorBlack85 USD 666.88
+                                                .d-flex
+                                                    button.btnDetail.text14.colorOrange(type='button')
+                                                        i.fas.fa-caret-down
+                                                        span.ml5 1 Adult
+                                                    p.text14.colorOrange USD 666.88
+                                                ul.formBox__sub
+                                                    li
+                                                        p.text12.medium.colorBlack85 Air Transportation Charges
+                                                    li
+                                                        p.text12.colorBlack85 Base Fare
+                                                        p.text12.colorBlack85 USD 166.00
+
+
+                                                    li
+                                                        p.text12.colorBlack85 Service Charges
+                                                        p.text12.colorBlack85 USD 166.00
+
+
+                                                    li
+                                                        p.text12.colorBlack85.medium Taxes & Fees
+                                                        p.text12.colorBlack85.medium USD 66.88
+
+
+                                                    li
+                                                        p.text12.colorBlack85.medium Total per Adult
+                                                        p.text12.colorBlack85.medium USD 66.88
+
+
+                                                    li
+                                                        p.text12.colorBlack85.medium x 1 Adult
+                                                        p.text12.colorBlack85.medium USD 66.88
+
+
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+        script(src='/js/t-datepicker.min.js')
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+        script.
+            $('.t-datepicker').tDatePicker({
+                autoClose: true,
+                titleCheckIn: 'Depart',
+                titleCheckOut: 'Return',
+                titleDateRange: 'day',
+                titleDateRanges: 'days',
+                iconDate: '<i class="fas fa-calendar-alt"></i>',
+                iconArrowTop: false
+            });
+
+
+
+
+

@@ -119,10 +119,27 @@
       left: 50%;
       transform: translateX(-50%);
     }
+    &.ticket-business{
+      .d-block{
+        p{
+          color: #1D0C43;
+        }
+        svg{
+          path{
+            fill: #1D0C43;
+          }
+        }
+      }
+    }
     .d-block{
       svg{
         margin-top: .5vw;
         transition: all .4s;
+      }
+      p.soldOut{
+        color: $black45;
+        font-weight: 500;
+        font-size: 1.3vw;
       }
     }
     &.active{
@@ -133,11 +150,11 @@
         background-color: #1D0C43;
       }
       p{
-        color: #fff;
+        color: #fff!important;
       }
       svg{
         path{
-          fill:#fff;
+          fill:#fff!important;
         }
       }
       .d-block{
@@ -425,6 +442,10 @@
     border-radius: 0 0 4px 4px;
     padding:1.5vw 1vw;
     text-align: center;
+    height: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   &__price{
     margin-bottom: 1vw;
