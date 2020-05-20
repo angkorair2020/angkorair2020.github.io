@@ -145,6 +145,7 @@
   }
   .btn{
     min-width: 10vw;
+    text-transform: uppercase;
   }
 }
 .btnMobile{
@@ -167,5 +168,14 @@
   .d-flex{
     justify-content: space-between;
     align-items: center;
+  }
+}
+a.aLink{
+  color: #318FDB;
+  @include breakpoint(sm){
+    &:hover{
+      color: #318FDB;
+      text-decoration: underline;
+    }
   }
 }
