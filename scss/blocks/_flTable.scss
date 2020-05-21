@@ -118,6 +118,7 @@
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
+      opacity: 0;
     }
     &.ticket-business{
       .d-block{
@@ -143,6 +144,9 @@
       }
     }
     &.active{
+      &:before{
+        opacity: 1;
+      }
       &.ticket-economy{
         background-color: #502678;
       }
