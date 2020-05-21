@@ -302,6 +302,7 @@
                   </div>
                 </div>
                 <div class="flDate">
+                  <button type="button" class="slick-prev slick-arrow slick-disabled">Previous</button>
                   <div class="flDate__slide">
                     <div class="flDate__item">
                       <p class="text14 colorBlack65">Sun, 12 Jan</p>
@@ -360,6 +361,7 @@
                       <p class="text16 colorBlack85">From USD&nbsp;<strong>418.22</strong></p>
                     </div>
                   </div>
+                  <button type="button" class="slick-next slick-arrow">Next</button>
                 </div>
                 <div class="flTable">
                   <div class="flTable__header">
@@ -1972,6 +1974,7 @@
                   </div>
                 </div>
                 <div class="flDate">
+                  <button type="button" class="slick-prev slick-arrow slick-disabled">Previous</button>
                   <div class="flDate__slide">
                     <div class="flDate__item">
                       <p class="text14 colorBlack65">Sun, 12 Jan</p>
@@ -2030,6 +2033,7 @@
                       <p class="text16 colorBlack85">From USD&nbsp;<strong>418.22</strong></p>
                     </div>
                   </div>
+                  <button type="button" class="slick-next slick-arrow">Next</button>
                 </div>
                 <div class="flTable">
                   <div class="flTable__header">
@@ -3632,12 +3636,16 @@
                 </div>
                 <div class="flDateMobile">
                   <div class="flDateMobile__slide">
-                    <div class="d-item"><span class="text14 colorBlack55">Tue</span><span class="text14 colorBlack85">14</span></div>
-                    <div class="d-item active"><span class="text14 colorBlack55">Wed</span><span class="text14 colorBlack85">15</span></div>
-                    <div class="d-item"><span class="text14 colorBlack55">Thu</span><span class="text14 colorBlack85">16</span></div>
-                    <div class="d-item"><span class="text14 colorBlack55">Fri</span><span class="text14 colorBlack85">17</span></div>
-                    <div class="d-item"><span class="text14 colorBlack55">Sat</span><span class="text14 colorBlack85">18</span></div>
-                    <div class="d-item"><span class="text14 colorBlack55">Sun</span><span class="text14 colorBlack85">19</span></div>
+                    <button type="button" class="slick-prev slick-arrow slick-disabled">Previous</button>
+                    <div class="flDateMobile__slide__group">
+                      <div class="d-item"><span class="text14 colorBlack55">Tue</span><span class="text14 colorBlack85">14</span></div>
+                      <div class="d-item active"><span class="text14 colorBlack55">Wed</span><span class="text14 colorBlack85">15</span></div>
+                      <div class="d-item"><span class="text14 colorBlack55">Thu</span><span class="text14 colorBlack85">16</span></div>
+                      <div class="d-item"><span class="text14 colorBlack55">Fri</span><span class="text14 colorBlack85">17</span></div>
+                      <div class="d-item"><span class="text14 colorBlack55">Sat</span><span class="text14 colorBlack85">18</span></div>
+                      <div class="d-item"><span class="text14 colorBlack55">Sun</span><span class="text14 colorBlack85">19</span></div>
+                    </div>
+                    <button type="button" class="slick-next slick-arrow">Next</button>
                   </div>
                   <button type="button" class="flDateMobile__btn"><span>Hide three days view (From&nbsp;<strong class="colorOrange">USD 228.22</strong>)</span>
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -6176,12 +6184,16 @@
                 </div>
                 <div class="flDateMobile">
                   <div class="flDateMobile__slide">
-                    <div class="d-item"><span class="text14 colorBlack55">Tue</span><span class="text14 colorBlack85">14</span></div>
-                    <div class="d-item active"><span class="text14 colorBlack55">Wed</span><span class="text14 colorBlack85">15</span></div>
-                    <div class="d-item"><span class="text14 colorBlack55">Thu</span><span class="text14 colorBlack85">16</span></div>
-                    <div class="d-item"><span class="text14 colorBlack55">Fri</span><span class="text14 colorBlack85">17</span></div>
-                    <div class="d-item"><span class="text14 colorBlack55">Sat</span><span class="text14 colorBlack85">18</span></div>
-                    <div class="d-item"><span class="text14 colorBlack55">Sun</span><span class="text14 colorBlack85">19</span></div>
+                    <button type="button" class="slick-prev slick-arrow slick-disabled">Previous</button>
+                    <div class="flDateMobile__slide__group">
+                      <div class="d-item"><span class="text14 colorBlack55">Tue</span><span class="text14 colorBlack85">14</span></div>
+                      <div class="d-item active"><span class="text14 colorBlack55">Wed</span><span class="text14 colorBlack85">15</span></div>
+                      <div class="d-item"><span class="text14 colorBlack55">Thu</span><span class="text14 colorBlack85">16</span></div>
+                      <div class="d-item"><span class="text14 colorBlack55">Fri</span><span class="text14 colorBlack85">17</span></div>
+                      <div class="d-item"><span class="text14 colorBlack55">Sat</span><span class="text14 colorBlack85">18</span></div>
+                      <div class="d-item"><span class="text14 colorBlack55">Sun</span><span class="text14 colorBlack85">19</span></div>
+                    </div>
+                    <button type="button" class="slick-next slick-arrow">Next</button>
                   </div>
                   <button type="button" class="flDateMobile__btn"><span>Hide three days view (From&nbsp;<strong class="colorOrange">USD 228.22</strong>)</span>
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -9474,30 +9486,6 @@
               }
           });
       };
-    </script>
-    <script>
-      $(".flDate__slide").slick({
-          slidesToShow: 7,
-          slidesToScroll: 1,
-          //autoplay: true,
-          speed: 500,
-          autoplaySpeed: 5000,
-          infinite: false,
-          arrows: true,
-          dots: false,
-      });
-    </script>
-    <script>
-      $(".flDateMobile__slide").slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          //autoplay: true,
-          speed: 500,
-          autoplaySpeed: 5000,
-          infinite: false,
-          arrows: true,
-          dots: false,
-      });
     </script>
     <script>
       $('.flDateMobile__btn').click(function () {

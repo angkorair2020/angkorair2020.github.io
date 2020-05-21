@@ -59,18 +59,10 @@
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin-bottom: 1vw;
+  position: relative;
   &__slide{
     display: flex;
     padding: 0 2vw;
-    .slick-prev{
-      left: 0;
-    }
-    .slick-next{
-      right: 0;
-    }
-    .slick-arrow{
-      border: none;
-    }
   }
   &__item{
     width: calc(100% / 7);
@@ -87,6 +79,9 @@
         }
       }
     }
+    &:nth-child(n+8){
+      display: none;
+    }
     &.active{
       background-color: $orange;
       p{
@@ -96,6 +91,15 @@
         }
       }
     }
+  }
+  .slick-prev{
+    left: 0;
+  }
+  .slick-next{
+    right: 0;
+  }
+  .slick-arrow{
+    border: none;
   }
 }
 
@@ -227,26 +231,35 @@
   &__slide{
     padding: 10px 30px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    .d-item{
-      text-align: center;
-      &.active{
-        span{
-          &:last-child{
-            background-color: $orange;
-            color: #fff;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
+    position: relative;
+    &__group{
+      display: flex;
+      .d-item{
+        text-align: center;
+        width: 33.333%;
+        &.active{
+          span{
+            &:last-child{
+              background-color: $orange;
+              color: #fff;
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+            }
           }
         }
-      }
-      span{
-        margin: 0 5px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        &:nth-child(n+4){
+          display: none;
+        }
+        span{
+          margin: 0 5px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
+
     .slick-arrow{
       border: none;
     }
