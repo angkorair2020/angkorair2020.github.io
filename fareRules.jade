@@ -1,0 +1,176 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .layoutInfo__banner(style='background-image: url("../images/layoutInfo__banner1.jpg");')
+                    .container
+                        h2 Manage Booking
+                .layoutInfo__body
+                    .container
+                        h2.mb15 Manage Booking
+                        .layoutInfo__box
+                            ul.layoutInfo__navbar
+                                li
+                                    a(href='bookingStatus.html')
+                                        span Booking status
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='refundRequest.html')
+                                        span Refund request
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li.active
+                                    a(href='fareRules.html')
+                                        span Fare rules
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='bookingChange.html')
+                                        span Booking change
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                            .layoutInfo__cont
+                                .fareRules
+                                    h3.mb15 Fare Rules
+                                    .fareRules__cont
+                                        p.medium I. Changes
+                                        p 1. Name change: Not permitted. Please go to refund process instead
+                                        p 2. Ticket transferred to other passenger: Not permitted.
+                                        p 3. Misspelling name: Must be the same person and apply the same fee as refund for promotional fares and nonrefundable fares - apply refund fee of refundable fare in the same sector.
+                                        p 4. Other changes: You may request to change your current ticket to other travel date or flight title with the same ticket class or higher classes (not allowed to downgrade to lower classes) and charges (change fee + different fee between two flights - if available) should be applied.
+                                        p Economy super saver class: not be accepted for change.
+                                        p Other changes are as details listed in the following table. (see attached table at the end of this page)
+                                        p.medium II. Cancellation
+                                        p Different ticket classes and different flight types (domestic and international) will have different cancellation fee and ticketing fee. Kindly check our fare rule carefully or email to booking@philippineairfare.com for more details and supports.
+                                        p 1. Refundable with Fee for Totally Unused Tickets; Non-Refundable for Partially Used Tickets.
+                                        p Economy super saver is not refundable in any case. This rule is applied on both domestic and international flights.
+                                        .table-responsive
+                                            table.table
+                                                thead
+                                                    tr
+                                                        th(colspan='2') INTERNATIONAL FLIGHTS
+                                                        th(colspan='2') CANCELLATION
+                                                        th(colspan='2') CHANGE
+                                                tbody
+                                                    tr
+                                                        td
+                                                            p.medium CLASS
+                                                        td
+                                                            p.medium FARE BASIS
+                                                        td
+                                                            p.medium BEFORE
+                                                        td
+                                                            p.medium ON/AFTER
+                                                        td
+                                                            p.medium BEFORE
+                                                        td
+                                                            p.medium ON/AFTER
+                                                    tr
+                                                        td
+                                                            p.colorBlack65 Business Flex
+                                                        td
+                                                            p.colorBlack65 &nbsp;
+                                                        td
+                                                            p.colorBlack65 USD40
+                                                        td
+                                                            p.colorBlack65 USD50
+                                                        td
+                                                            p.colorBlack65 FREE
+                                                        td
+                                                            p.colorBlack65 FREE
+                                                    tr
+                                                        td
+                                                            p.colorBlack65 Business Value
+                                                        td
+                                                            p.colorBlack65 &nbsp;
+                                                        td
+                                                            p.colorBlack65 USD40
+                                                        td
+                                                            p.colorBlack65 USD60
+                                                        td
+                                                            p.colorBlack65 FREE
+                                                        td
+                                                            p.colorBlack65 FREE
+                                                    tr
+                                                        td
+                                                            p.colorBlack65 Premium Economy
+                                                        td
+                                                            p.colorBlack65 &nbsp;
+                                                        td(colspan='2')
+                                                            p.colorBlack65 USD50
+                                                        td(colspan='2')
+                                                            p.colorBlack65 USD50
+                                                    tr
+                                                        td
+                                                            p.colorBlack65 Economy
+                                                        td
+                                                            p.colorBlack65 Flexible
+                                                        td(colspan='2')
+                                                            p.colorBlack65 USD60
+                                                        td(colspan='2')
+                                                            p.colorBlack65 USD60
+                                                    tr
+                                                        td
+                                                            p.colorBlack65 &nbsp;
+                                                        td
+                                                            p.colorBlack65 Value
+                                                        td(colspan='2')
+                                                            p.colorBlack65 USD60
+                                                        td(colspan='2')
+                                                            p.colorBlack65 USD60
+                                                    tr
+                                                        td
+                                                            p.colorBlack65 &nbsp;
+                                                        td
+                                                            p.colorBlack65 Saver
+                                                        td(colspan='2')
+                                                            p.colorBlack65 USD60
+                                                        td(colspan='2')
+                                                            p.colorBlack65 USD60
+                                                    tr
+                                                        td
+                                                            p.colorBlack65 &nbsp;
+                                                        td
+                                                            p.colorBlack65 Super Saver
+                                                        td(colspan='2')
+                                                            p.colorBlack65 Not permitted
+                                                        td(colspan='2')
+                                                            p.colorBlack65 Not permitted
+                                        p.medium Important Note: Combination fare between economy super saver and other classes will not be permitted for cancellation or refund.
+                                        p.medium The above general fare rules are for reference only. Specific fare rules may vary and different from the general fare rules and should be provided on request.
+                                        p.medium Ticketing fee is not refundable in any case. Taxes and Airport fee are not refundable for super saver class.
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+
+
+

@@ -229,3 +229,48 @@
     }
   }
 }
+.fareRules{
+  &__cont{
+    > p{
+      font-size: 14px;
+      color: $black85;
+      margin-bottom: 15px;
+      @include breakpoint(sm){
+        font-size: 1vw;
+        margin-bottom: 1vw;
+      }
+    }
+  }
+  .table{
+    margin-bottom: 15px;
+    @include breakpoint(sm){
+      margin-bottom: 1vw;
+    }
+    th{
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: $black85;
+      border-bottom: none;
+      @include breakpoint(sm){
+        font-size: 1vw;
+      }
+    }
+    th,td{
+      border-right: 1px solid #dee2e6;
+      text-align: center;
+      &:first-child{
+        border-left: 1px solid #dee2e6;
+      }
+    }
+  }
+  tbody{
+    tr{
+      &:last-child{
+        td{
+          border-bottom: 1px solid #dee2e6;
+        }
+      }
+    }
+  }
+}
