@@ -21,7 +21,7 @@ html(lang="vi")
                                         span Booking status
                                         svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
                                             path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
-                                li.active
+                                li
                                     a(href='refundRequest.html')
                                         span Refund request
                                         svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
@@ -31,14 +31,14 @@ html(lang="vi")
                                         span Fare rules
                                         svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
                                             path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
-                                li
+                                li.active
                                     a(href='bookingChange.html')
                                         span Booking change
                                         svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
                                             path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
                             .layoutInfo__cont
-                                .refundRequest
-                                    h3.mb15 Refund request
+                                .bookingChange
+                                    h3.mb15 Booking Change
                                     .form-group
                                         .alert.alert_blue
                                             .alert__icon
@@ -60,7 +60,7 @@ html(lang="vi")
                                         .form-group
                                             label Subject
                                             select.form-control.form-control-lg
-                                                option Refund Request
+                                                option Booking change
                                                 option question 1
                                                 option question 2
                                         .form-group
