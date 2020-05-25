@@ -76,6 +76,10 @@
   @include breakpoint(xs){
     left: 0;
   }
+  @include breakpoint(sm){
+    left: auto;
+    right: 0;
+  }
 }
 .t-datepicker-day{
   @include breakpoint(sm){

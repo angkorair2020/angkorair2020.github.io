@@ -29,6 +29,11 @@
   &__row{
     display: flex;
     background-color: #fff;
+    border: 1.5px solid transparent;
+    transition: border-color .3s;
+    &:hover{
+      border-color: $purple;
+    }
   }
   &__cell{
     padding: 1vw;
