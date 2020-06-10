@@ -71,6 +71,9 @@
   @include breakpoint(xs){
     width: 100%;
   }
+  @include breakpoint(sm){
+    width: 45vw;
+  }
 }
 .t-check-out .t-datepicker-day{
   @include breakpoint(xs){
@@ -84,5 +87,14 @@
 .t-datepicker-day{
   @include breakpoint(sm){
     border-bottom: 4px solid $purple;
+    top: calc(100% + .5vw);
+    padding: .8vw 0;
+  }
+}
+.t-next, .t-prev, .t-table-condensed td, .t-table-condensed th{
+  @include breakpoint(sm){
+    padding: .8vw;
+    font-size: 1vw;
+    line-height: 1.5;
   }
 }
