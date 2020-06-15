@@ -100,4 +100,27 @@
       }
     }
   }
+  &.table-purple{
+    thead{
+      th{
+        background-color: $purple;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+        border-radius: 0;
+        vertical-align: middle;
+        &:last-child{
+          border-right: none;
+        }
+      }
+    }
+    tbody{
+      td{
+        border-right: 1px solid #dee2e6;
+        &:last-child{
+          border-right: none;
+        }
+      }
+    }
+  }
 }
