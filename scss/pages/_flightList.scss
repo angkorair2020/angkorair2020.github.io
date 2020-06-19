@@ -74,9 +74,6 @@
       background-color: $orange;
       p{
         color: #fff;
-        strong{
-          font-weight: 500;
-        }
       }
     }
     &:nth-child(n+8){
@@ -90,6 +87,11 @@
           font-weight: 500;
         }
       }
+    }
+    &.disabled{
+      pointer-events: none;
+      background-color: #eee;
+      opacity: .5;
     }
   }
   .slick-prev{
@@ -246,6 +248,10 @@
               border-radius: 50%;
             }
           }
+        }
+        &.disabled{
+          pointer-events: none;
+          opacity: .5;
         }
         &:nth-child(n+4){
           display: none;
