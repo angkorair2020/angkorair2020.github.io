@@ -147,6 +147,76 @@ html(lang="vi")
                                                 p.text12.colorBlack55.mt15 * Final price for all travelers (included all taxes, fees & charges)
                 .flightPassenger__main
                     .container
+                        .reservation
+                            .reservation__header
+                                .d-flex
+                                    .reservation__icon
+                                        svg(width='81', height='55', viewBox='0 0 81 55', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(fill-rule='evenodd', clip-rule='evenodd', d='M19.9315 11.1848L66.3092 0.614144C70.0423 -0.236718 73.6709 1.71793 74.4142 4.9808L80.8663 33.2889C81.5768 36.4063 79.3952 39.5915 75.9422 40.6105V17.5463C75.9425 14.0325 72.6839 11.1848 68.6636 11.1848H19.9315Z', fill='#662F8E')
+                                            rect(x='8', y='16', width='64', height='38', fill='white')
+                                            path(fill-rule='evenodd', clip-rule='evenodd', d='M7.41838 13.1753H67.1785C71.0073 13.1753 74.1108 15.8874 74.1105 19.2339V48.268C74.1105 51.6137 71.0063 54.3281 67.1774 54.3281H7.41838C3.59064 54.3281 0.486084 51.6148 0.486084 48.268V19.2339C0.486084 15.8882 3.59064 13.1753 7.41838 13.1753ZM19.4043 48.2009H24.2011V44.0725H19.4043V48.2009ZM19.4043 39.9437H24.2011V35.8161H19.4043V39.9437ZM19.4043 31.6877H24.2011V27.5589H19.4043V31.6877ZM19.4043 23.4305H24.2011V19.3028H19.4043V23.4305ZM60.166 45.924L58.0064 48.0836L52.0674 36.7456L46.1285 42.6846L46.6684 46.4639L45.0487 48.0836L42.3491 43.2245L37.49 40.525L39.1097 38.9053L42.889 39.4452L48.828 33.5062L37.49 27.5673L39.6496 25.4076L53.6871 28.6471L59.6261 22.7081C60.0556 22.2785 60.6383 22.0372 61.2458 22.0372C61.8533 22.0372 62.4359 22.2785 62.8655 22.7081C63.2951 23.1377 63.5364 23.7203 63.5364 24.3278C63.5364 24.9353 63.2951 25.518 62.8655 25.9475L56.9266 31.8865L60.166 45.924Z', fill='#662F8E')
+                                    .reservation__text
+                                        p.text16.medium.colorPurple Reservation code: JVHNKM
+                                        p.text14.colorBlack55.mb-0 E-ticket number can be used for check-in at the airport check-in counter
+                                button.btnYourLight(type='button')
+                                    span E-tickets for your flight
+                            .reservation__body
+                                button.reservation__close(type='button')
+                                    svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                                .reservation__list
+                                    .reservation__col
+                                        ul
+                                            li
+                                                p 1. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 2. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 3. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 4. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 5. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 6. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 7. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 8. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                    .reservation__col
+                                        ul
+                                            li
+                                                p 1. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 2. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 3. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 4. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 5. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 6. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 7. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 8. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
                         .formBox
                             .formBox__header
                                 svg.svg1(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
@@ -1162,6 +1232,13 @@ html(lang="vi")
                         .siblings(".tipsBox__body")
                         .slideDown(200);
                 }
+            });
+        script.
+            $('.btnYourLight').click(function () {
+                $('.reservation__body').addClass('open');
+            });
+            $('.reservation__close').click(function () {
+                $('.reservation__body').removeClass('open');
             });
 
 
